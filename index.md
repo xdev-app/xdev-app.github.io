@@ -8,6 +8,37 @@ title: Home
   <p>{{ site.description }}</p>
 </section>
 
+<section class="product-slideshow">
+  <div class="slider">
+    <div class="slider-track">
+      {% for item in site.data.harga limit:5 %}
+      <div class="slide">
+        <div class="slide-image">
+          <img src="{{ '/assets/images/' | relative_url }}{{ item.foto }}" alt="{{ item.produk }}" onerror="this.src='https://placehold.co/800x500?text=Gambar+Kosong'">
+        </div>
+        <div class="slide-content">
+          <span class="category">{{ item.kategori }}</span>
+          <h3 class="slide-title">{{ item.produk }}</h3>
+          <div class="price-value">
+            <span class="currency">Rp</span>
+            <span class="amount">{{ item.harga }}</span>
+            <span class="unit">/{{ item.satuan }}</span>
+          </div>
+          <a href="https://wa.me/{{ site.phone }}?text=Halo,%20saya%20ingin%20pesan%20{{ item.produk }}" class="slide-btn">Pesan via WhatsApp</a>
+        </div>
+      </div>
+      {% endfor %}
+    </div>
+    <button class="slide-arrow prev" aria-label="Sebelumnya">‹</button>
+    <button class="slide-arrow next" aria-label="Berikutnya">›</button>
+    <div class="slide-dots">
+      {% for item in site.data.harga limit:5 %}
+      <button class="dot" data-index="{{ forloop.index0 }}" aria-label="Slide {{ forloop.index }}"></button>
+      {% endfor %}
+    </div>
+  </div>
+</section>
+
 <div class="filter-container">
   <button class="filter-btn active" onclick="filterProduct('all')">Semua</button>
   <button class="filter-btn" onclick="filterProduct('Fresh Product')">Telur & Segar</button>
@@ -183,4 +214,69 @@ function filterProduct(category) {
         }
     });
 }
+
+const track = document.querySelector('.slider-track');
+const slides = document.querySelectorAll('.slide');
+const nextBtn = document.querySelector('.slide-arrow.next');
+const prevBtn = document.querySelector('.slide-arrow.prev');
+const dots = document.querySelectorAll('.dot');
+let currentSlide = 0;
+let autoTimer;
+
+function updateSlide() {
+  if (!track) return;
+  track.style.transform = 'translateX(' + (-currentSlide * 100) + '%)';
+  dots.forEach((d,i)=>{ if(i===currentSlide){ d.classList.add('active'); } else { d.classList.remove('active'); } });
+}
+function nextSlide() {
+  currentSlide = (currentSlide + 1) % slides.length;
+  updateSlide();
+}
+function prevSlide() {
+  currentSlide = (currentSlide - 1 + slides.length) % slides.length;
+  updateSlide();
+}
+function startAuto() {
+  stopAuto();
+  autoTimer = setInterval(nextSlide, 4000);
+}
+function stopAuto() {
+  if (autoTimer) clearInterval(autoTimer);
+}
+if (nextBtn && prevBtn) {
+  nextBtn.addEventListener('click', ()=>{ stopAuto(); nextSlide(); startAuto(); });
+  prevBtn.addEventListener('click', ()=>{ stopAuto(); prevSlide(); startAuto(); });
+}
+dots.forEach(dot=>{
+  dot.addEventListener('click', ()=>{
+    stopAuto();
+    const idx = parseInt(dot.getAttribute('data-index'));
+    if (!isNaN(idx)) { currentSlide = idx; updateSlide(); startAuto(); }
+  });
+});
+let startX = 0;
+let isPointer = false;
+const sliderEl = document.querySelector('.slider');
+function onStart(e) {
+  isPointer = true;
+  stopAuto();
+  startX = e.touches ? e.touches[0].clientX : e.clientX;
+}
+function onMove(e) {}
+function onEnd(e) {
+  if (!isPointer) return;
+  const endX = e.changedTouches ? e.changedTouches[0].clientX : e.clientX;
+  const diff = endX - startX;
+  if (Math.abs(diff) > 50) { if (diff < 0) { nextSlide(); } else { prevSlide(); } }
+  startAuto();
+  isPointer = false;
+}
+if (sliderEl) {
+  sliderEl.addEventListener('touchstart', onStart, { passive: true });
+  sliderEl.addEventListener('touchend', onEnd, { passive: true });
+  sliderEl.addEventListener('pointerdown', onStart);
+  sliderEl.addEventListener('pointerup', onEnd);
+}
+updateSlide();
+startAuto();
 </script>
