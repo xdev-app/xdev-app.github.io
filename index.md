@@ -32,7 +32,7 @@ title: Home
         <span class="amount">{{ item.harga }}</span>
         <span class="unit">/{{ item.satuan }}</span>
       </div>
-      <a href="https://wa.me/628123456789?text=Halo,%20saya%20ingin%20pesan%20{{ item.produk }}" class="buy-btn">
+      <a href="https://wa.me/{{ site.phone }}?text=Halo,%20saya%20ingin%20pesan%20{{ item.produk }}" class="buy-btn">
          Beli Sekarang
       </a>
     </div>
