@@ -10,6 +10,11 @@ title: Home
 
 {% include slideshow.html id="slideshow1" limit=5 autoplay=4000 %}
 
+{% slider bullets %}
+  ![Telur Ayam Lokal](/assets/images/telur-ayam-ras.jpg)
+  ![Telur Ayam Omega](/assets/images/telur-omega.jpg)
+{% endslider %}
+
 <div class="filter-container">
   <button class="filter-btn active" onclick="filterProduct('all')">Semua</button>
   <button class="filter-btn" onclick="filterProduct('Fresh Product')">Telur & Segar</button>

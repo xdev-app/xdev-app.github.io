@@ -35,6 +35,7 @@ plugins:
   - jekyll-sitemap
   - jekyll-feed
   - jekyll-gist
+  - jekyll-ideal-image-slider
 
 # -----------------------------------------------------------------------------
 # SEO & SOCIAL

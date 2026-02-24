@@ -1,5 +1,8 @@
 source "https://rubygems.org"
-
-gem "github-pages", group: :jekyll_plugins
-gem "webrick", "~> 1.8"
-gem "tzinfo-data", platforms: [:mingw, :mswin, :x64_mingw, :jruby]
+gem "jekyll", "~> 4.3"
+gem "jekyll-seo-tag"
+gem "jekyll-sitemap"
+gem "jekyll-feed"
+gem "jekyll-gist"
+gem "webrick"
+gem "jekyll-ideal-image-slider"

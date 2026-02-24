@@ -5,6 +5,10 @@
     <link rel="stylesheet" href="{{ '/assets/css/main.css' | relative_url }}">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     {% seo %}
+    {% if page.iis_slider_active %}
+    <link rel="stylesheet" href="https://unpkg.com/ideal-image-slider@1.5.1/ideal-image-slider.css">
+    <link rel="stylesheet" href="https://unpkg.com/ideal-image-slider@1.5.1/themes/default.css">
+    {% endif %}
 </head>
 <body>
     <header>
@@ -35,5 +39,8 @@
     </main>
 
     {% include footer.html %}
+    {% if page.iis_slider_active %}
+    <script src="https://unpkg.com/ideal-image-slider@1.5.1/ideal-image-slider.min.js"></script>
+    {% endif %}
 </body>
 </html>

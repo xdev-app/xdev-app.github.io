@@ -56,8 +56,10 @@
 </section>
 
 <section class="product-slideshow">
-  <div class="slider">
+  <div class="slider" id="slideshow1">
     <div class="slider-track">
+      
+      
       
       <div class="slide">
         <div class="slide-image">
@@ -103,6 +105,71 @@
     </div>
   </div>
 </section>
+
+<script>
+(function(){
+  var root = document.getElementById('slideshow1');
+  if (!root) return;
+  var track = root.querySelector('.slider-track');
+  var slides = root.querySelectorAll('.slide');
+  var nextBtn = root.querySelector('.slide-arrow.next');
+  var prevBtn = root.querySelector('.slide-arrow.prev');
+  var dots = root.querySelectorAll('.dot');
+  var currentSlide = 0;
+  var autoTimer;
+  var interval = 4000;
+
+  function updateSlide() {
+    track.style.transform = 'translateX(' + (-currentSlide * 100) + '%)';
+    dots.forEach(function(d, i){ if (i === currentSlide) d.classList.add('active'); else d.classList.remove('active'); });
+  }
+  function nextSlide() {
+    currentSlide = (currentSlide + 1) % slides.length;
+    updateSlide();
+  }
+  function prevSlide() {
+    currentSlide = (currentSlide - 1 + slides.length) % slides.length;
+    updateSlide();
+  }
+  function startAuto() {
+    stopAuto();
+    autoTimer = setInterval(nextSlide, interval);
+  }
+  function stopAuto() {
+    if (autoTimer) clearInterval(autoTimer);
+  }
+  if (nextBtn) nextBtn.addEventListener('click', function(){ stopAuto(); nextSlide(); startAuto(); });
+  if (prevBtn) prevBtn.addEventListener('click', function(){ stopAuto(); prevSlide(); startAuto(); });
+  dots.forEach(function(dot){
+    dot.addEventListener('click', function(){
+      stopAuto();
+      var idx = parseInt(dot.getAttribute('data-index'));
+      if (!isNaN(idx)) { currentSlide = idx; updateSlide(); startAuto(); }
+    });
+  });
+  var startX = 0;
+  var isPointer = false;
+  function onStart(e) {
+    isPointer = true;
+    stopAuto();
+    startX = e.touches ? e.touches[0].clientX : e.clientX;
+  }
+  function onEnd(e) {
+    if (!isPointer) return;
+    var endX = e.changedTouches ? e.changedTouches[0].clientX : e.clientX;
+    var diff = endX - startX;
+    if (Math.abs(diff) > 50) { if (diff < 0) { nextSlide(); } else { prevSlide(); } }
+    startAuto();
+    isPointer = false;
+  }
+  root.addEventListener('touchstart', onStart, { passive: true });
+  root.addEventListener('touchend', onEnd, { passive: true });
+  root.addEventListener('pointerdown', onStart);
+  root.addEventListener('pointerup', onEnd);
+  updateSlide();
+  startAuto();
+})();
+</script>
 
 <div class="filter-container">
   <button class="filter-btn active" onclick="filterProduct('all')">Semua</button>
@@ -302,70 +369,7 @@ function filterProduct(category) {
     });
 }
 
-document.addEventListener('DOMContentLoaded', function initSlider() {
-  const track = document.querySelector('.slider-track');
-  const slides = document.querySelectorAll('.slide');
-  const nextBtn = document.querySelector('.slide-arrow.next');
-  const prevBtn = document.querySelector('.slide-arrow.prev');
-  const dots = document.querySelectorAll('.dot');
-  let currentSlide = 0;
-  let autoTimer;
-
-  if (!track || slides.length === 0) return;
-
-  function updateSlide() {
-    track.style.transform = 'translateX(' + (-currentSlide * 100) + '%)';
-    dots.forEach((d,i)=>{ if(i===currentSlide){ d.classList.add('active'); } else { d.classList.remove('active'); } });
-  }
-  function nextSlide() {
-    currentSlide = (currentSlide + 1) % slides.length;
-    updateSlide();
-  }
-  function prevSlide() {
-    currentSlide = (currentSlide - 1 + slides.length) % slides.length;
-    updateSlide();
-  }
-  function startAuto() {
-    stopAuto();
-    autoTimer = setInterval(nextSlide, 4000);
-  }
-  function stopAuto() {
-    if (autoTimer) clearInterval(autoTimer);
-  }
-  if (nextBtn) nextBtn.addEventListener('click', ()=>{ stopAuto(); nextSlide(); startAuto(); });
-  if (prevBtn) prevBtn.addEventListener('click', ()=>{ stopAuto(); prevSlide(); startAuto(); });
-  dots.forEach(dot=>{
-    dot.addEventListener('click', ()=>{
-      stopAuto();
-      const idx = parseInt(dot.getAttribute('data-index'));
-      if (!isNaN(idx)) { currentSlide = idx; updateSlide(); startAuto(); }
-    });
-  });
-  let startX = 0;
-  let isPointer = false;
-  const sliderEl = document.querySelector('.slider');
-  function onStart(e) {
-    isPointer = true;
-    stopAuto();
-    startX = e.touches ? e.touches[0].clientX : e.clientX;
-  }
-  function onEnd(e) {
-    if (!isPointer) return;
-    const endX = e.changedTouches ? e.changedTouches[0].clientX : e.clientX;
-    const diff = endX - startX;
-    if (Math.abs(diff) > 50) { if (diff < 0) { nextSlide(); } else { prevSlide(); } }
-    startAuto();
-    isPointer = false;
-  }
-  if (sliderEl) {
-    sliderEl.addEventListener('touchstart', onStart, { passive: true });
-    sliderEl.addEventListener('touchend', onEnd, { passive: true });
-    sliderEl.addEventListener('pointerdown', onStart);
-    sliderEl.addEventListener('pointerup', onEnd);
-  }
-  updateSlide();
-  startAuto();
-});
+/* slideshow dibangun via include untuk kompatibilitas GitHub Pages */
 </script>
 
 
