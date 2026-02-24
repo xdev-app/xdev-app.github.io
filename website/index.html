@@ -1,0 +1,27 @@
+---
+layout: default
+title: Katalog Distributor
+---
+
+<div class="produk-container">
+    {% for item in site.data.produk %}
+    <div class="card">
+        <h3>{{ item.nama }}</h3>
+        <p>Harga: <strong>Rp {{ item.harga }}</strong></p>
+        <button onclick="kirimPesanan('{{ item.nama }}')">Pesan Sekarang</button>
+    </div>
+    {% endfor %}
+</div>
+
+<script>
+function kirimPesanan(namaBarang) {
+    fetch('http://localhost:5000/api/order', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify({ nama: namaBarang })
+    })
+    .then(response => response.json())
+    .then(data => alert(data.pesan))
+    .catch(err => alert('Gagal terhubung ke server backend'));
+}
+</script>

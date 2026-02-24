@@ -1,0 +1,13 @@
+- produk: "Telur Ayam Lokal"
+  harga: "28.500"
+  satuan: "kg"
+  stok: "Ready"
+  kategori: "Fresh Product"
+  foto: "telur-ayam-ras.jpg"
+
+- produk: "Telur Ayam Omega"
+  harga: "32.000"
+  satuan: "kg"
+  stok: "Ready"
+  kategori: "Fresh Product"
+  foto: "telur-omega.jpg"  

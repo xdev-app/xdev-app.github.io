@@ -1,0 +1,62 @@
+# -----------------------------------------------------------------------------
+# IDENTITAS SITUS
+# -----------------------------------------------------------------------------
+title: "Agen Sembako Murah: Telur, Indomie & Beras di Bandung"
+description: >-
+  Cari agen sembako termurah? Kami sediakan stok telur, Indomie, dan beras kualitas super dengan harga grosir. Cocok untuk stok warung atau dijual kembali!
+url: "https://panganberkah.com"
+author: "Admin Pangan Berkah"
+email: "kontak@panganberkah.com"
+lang: "id_ID"
+phone: "628123456789"
+logo: "/assets/images/logo.svg"
+defaults:
+  - scope:
+      path: ""
+    values:
+      image: "/assets/images/hero-bg.jpg"
+
+# -----------------------------------------------------------------------------
+# STRUKTUR & KOLEKSI
+# -----------------------------------------------------------------------------
+permalink: /blog/:title/
+excerpt_separator: ""
+
+collections:
+  produk:
+    output: true
+    permalink: /produk/:path/
+
+# -----------------------------------------------------------------------------
+# PLUGINS
+# -----------------------------------------------------------------------------
+plugins:
+  - jekyll-seo-tag
+  - jekyll-sitemap
+  - jekyll-feed
+  - jekyll-gist
+
+# -----------------------------------------------------------------------------
+# SEO & SOCIAL
+# -----------------------------------------------------------------------------
+social:
+  name: "Distributor Pangan Berkah"
+  links:
+    - https://facebook.com/panganberkah
+    - https://instagram.com/panganberkah
+  type: "WholesaleStore"
+
+# -----------------------------------------------------------------------------
+# PENGATURAN BUILD
+# -----------------------------------------------------------------------------
+markdown: kramdown
+highlighter: rouge
+
+# Daftar folder yang tidak perlu diproses Jekyll
+exclude:
+  - Gemfile
+  - Gemfile.lock
+  - node_modules
+  - vendor/
+  - .jekyll-cache/
+  - .github/

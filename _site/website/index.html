@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Katalog Distributor</title>
+    <link rel="stylesheet" href="/assets/css/main.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- Begin Jekyll SEO tag v2.8.0 -->
+<title>Katalog Distributor | Agen Sembako Murah: Telur, Indomie &amp; Beras di Bandung</title>
+<meta name="generator" content="Jekyll v4.3.4" />
+<meta property="og:title" content="Katalog Distributor" />
+<meta name="author" content="Admin Pangan Berkah" />
+<meta property="og:locale" content="id_ID" />
+<meta name="description" content="Cari agen sembako termurah? Kami sediakan stok telur, Indomie, dan beras kualitas super dengan harga grosir. Cocok untuk stok warung atau dijual kembali!" />
+<meta property="og:description" content="Cari agen sembako termurah? Kami sediakan stok telur, Indomie, dan beras kualitas super dengan harga grosir. Cocok untuk stok warung atau dijual kembali!" />
+<link rel="canonical" href="http://localhost:4000/website/" />
+<meta property="og:url" content="http://localhost:4000/website/" />
+<meta property="og:site_name" content="Agen Sembako Murah: Telur, Indomie &amp; Beras di Bandung" />
+<meta property="og:image" content="http://localhost:4000/assets/images/hero-bg.jpg" />
+<meta property="og:type" content="website" />
+<meta name="twitter:card" content="summary_large_image" />
+<meta property="twitter:image" content="http://localhost:4000/assets/images/hero-bg.jpg" />
+<meta property="twitter:title" content="Katalog Distributor" />
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"WebPage","author":{"@type":"Person","name":"Admin Pangan Berkah"},"description":"Cari agen sembako termurah? Kami sediakan stok telur, Indomie, dan beras kualitas super dengan harga grosir. Cocok untuk stok warung atau dijual kembali!","headline":"Katalog Distributor","image":"http://localhost:4000/assets/images/hero-bg.jpg","publisher":{"@type":"Organization","logo":{"@type":"ImageObject","url":"http://localhost:4000/assets/images/logo.svg"},"name":"Admin Pangan Berkah"},"url":"http://localhost:4000/website/"}</script>
+<!-- End Jekyll SEO tag -->
+
+</head>
+<body>
+    <header>
+    <nav class="navbar">
+        <a href="/" class="logo">
+            <img src="/assets/images/logo.svg" alt="Alfutuhaat">
+        </a>
+        
+        <input type="checkbox" id="check">
+        <label for="check" class="checkbtn">
+            <span></span>
+            <span></span>
+            <span></span>
+        </label>
+
+        <ul class="nav-links">
+            <li><a href="/">Home</a></li>
+            <li><a href="/katalog">Katalog</a></li>
+            <li><a href="/blog">Blog</a></li>
+            <li><a href="/update">Update Stok</a></li>
+            <li><a href="https://wa.me/628123456789" class="nav-btn-wa">Order Now</a></li>
+        </ul>
+    </nav>
+</header>
+
+    <main style="padding: 20px 5%;">
+        <div class="produk-container">
+    
+</div>
+
+<script>
+function kirimPesanan(namaBarang) {
+    fetch('http://localhost:5000/api/order', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify({ nama: namaBarang })
+    })
+    .then(response => response.json())
+    .then(data => alert(data.pesan))
+    .catch(err => alert('Gagal terhubung ke server backend'));
+}
+</script>
+    </main>
+
+    <footer class="site-footer">
+  <div class="footer-inner">
+    <div class="footer-brand">
+      <div class="logo">DII AGG</div>
+      <p>Distributor Telur, Indomie, dan Beras</p>
+    </div>
+    <div class="footer-links">
+      <a href="/">Home</a>
+      <a href="/katalog">Katalog</a>
+      <a href="/update">Update Stok</a>
+    </div>
+    <div class="footer-contact">
+      <a href="https://wa.me/628123456789" class="footer-wa">Hubungi via WhatsApp</a>
+      <p>Bandung, Jawa Barat</p>
+    </div>
+  </div>
+  <div class="footer-bottom">
+    <span>&copy; 2026 Alfutuhaat Agen Telur, Indomie dan Beras</span>
+  </div>
+</footer>
+
+</body>
+</html>

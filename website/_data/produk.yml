@@ -1,0 +1,12 @@
+- id: 1
+  nama: "Telur Ayam Ras (1kg)"
+  kategori: "Telur"
+  harga: 28000
+- id: 2
+  nama: "Indomie Goreng (1 Dus)"
+  kategori: "Mie Instan"
+  harga: 115000
+- id: 3
+  nama: "Beras Pandan Wangi (5kg)"
+  kategori: "Beras"
+  harga: 85000

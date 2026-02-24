@@ -1,0 +1,30 @@
+---
+layout: default
+title: Katalog Produk Distributor
+---
+
+<div class="product-grid">
+  {% for item in site.produk %}
+  <div class="product-card" data-category="{{ item.kategori }}">
+    <div class="product-badge">{{ item.stok }}</div>
+    
+    <div class="product-image">
+      <img src="{{ item.foto | relative_url }}" alt="{{ item.title }}">
+    </div>
+
+    <div class="product-info">
+      <span class="category">{{ item.kategori }}</span>
+      <h3>{{ item.title }}</h3>
+      
+      <div class="price-tag">
+        <span class="amount">Rp {{ item.harga }}</span>
+        <span class="unit">/{{ item.satuan }}</span>
+      </div>
+
+      <a href="{{ item.url | relative_url }}" class="buy-btn">Lihat Detail</a>  
+      
+      
+    </div>
+  </div>
+  {% endfor %}
+</div>

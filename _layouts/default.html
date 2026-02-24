@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>{{ page.title }}</title>
+    <link rel="stylesheet" href="{{ '/assets/css/main.css' | relative_url }}">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    {% seo %}
+</head>
+<body>
+    <header>
+    <nav class="navbar">
+        <a href="/" class="logo">
+            <img src="{{ '/assets/images/logo.svg' | relative_url }}" alt="Alfutuhaat">
+        </a>
+        
+        <input type="checkbox" id="check">
+        <label for="check" class="checkbtn">
+            <span></span>
+            <span></span>
+            <span></span>
+        </label>
+
+        <ul class="nav-links">
+            <li><a href="/">Home</a></li>
+            <li><a href="/katalog">Katalog</a></li>
+            <li><a href="/blog">Blog</a></li>
+            <li><a href="/update">Update Stok</a></li>
+            <li><a href="https://wa.me/628123456789" class="nav-btn-wa">Order Now</a></li>
+        </ul>
+    </nav>
+</header>
+
+    <main style="padding: 20px 5%;">
+        {{ content }}
+    </main>
+
+    {% include footer.html %}
+</body>
+</html>

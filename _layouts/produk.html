@@ -1,0 +1,117 @@
+---
+layout: default
+---
+
+<div class="product-detail-wrapper">
+  {% include seo-produk.html %}
+  <nav class="breadcrumb">
+    <a href="/katalog">← Kembali ke Katalog</a>
+  </nav>
+
+  <div class="product-container">
+    <div class="product-image-section">
+      <img src="{{ page.foto | relative_url }}" alt="{{ page.title }}" class="main-image">
+      {% if page.stok == "Ready" %}
+        <span class="status-badge">Tersedia</span>
+      {% endif %}
+    </div>
+
+    <div class="product-info-section">
+      <span class="category-tag">{{ page.kategori | default: "Produk Sembako" }}</span>
+      <h1 class="product-title">{{ page.title }}</h1>
+      <div class="meta-grid">
+        <div class="meta-item"><span>Stok</span><strong>{{ page.stok | default: "Cek Admin" }}</strong></div>
+        <div class="meta-item"><span>Kategori</span><strong>{{ page.kategori | default: "-" }}</strong></div>
+        <div class="meta-item"><span>Satuan</span><strong>{{ page.satuan | default: "kg" }}</strong></div>
+      </div>
+      
+      <div class="price-box">
+        <p class="label">Harga Grosir Hari Ini:</p>
+        <div class="price-value">
+          <span class="currency">Rp</span>
+          <span class="amount">{{ page.harga }}</span>
+          <span class="unit">/ {{ page.satuan | default: "kg" }}</span>
+        </div>
+      </div>
+
+      <div class="product-description">
+        {{ content }}
+      </div>
+
+      <div class="action-area">
+        <a href="https://wa.me/{{ site.phone | replace: '-', '' }}?text=Halo%20Admin,%20saya%20ingin%20pesan%20{{ page.title | url_encode }}" class="wa-btn">
+          <img src="https://cdn-icons-png.flaticon.com/512/733/733585.png" width="20">
+          Pesan via WhatsApp
+        </a>
+      </div>
+    </div>
+  </div>
+</div>
+
+<style>
+.product-detail-wrapper { max-width: 1100px; margin: 40px auto; padding: 0 20px; color: #fff; }
+.breadcrumb { margin-bottom: 20px; }
+.breadcrumb a { color: var(--gold-primary); text-decoration: none; font-size: 0.9rem; }
+
+.product-container { 
+  display: grid; 
+  grid-template-columns: 1fr 1fr; 
+  gap: 50px; 
+  background: var(--dark-surface); 
+  padding: 40px; 
+  border-radius: 20px;
+  border: 1px solid #333;
+}
+
+.product-image-section { position: relative; }
+.main-image { width: 100%; border-radius: 15px; border: 1px solid #444; object-fit: cover; transition: transform .4s ease; }
+.product-image-section:hover .main-image { transform: scale(1.03); }
+.status-badge { 
+  position: absolute; top: 15px; left: 15px; 
+  background: #27ae60; color: white; padding: 5px 15px; 
+  border-radius: 20px; font-size: 0.8rem; font-weight: bold;
+}
+
+.category-tag { color: var(--gold-primary); text-transform: uppercase; letter-spacing: 2px; font-size: 0.8rem; }
+.product-title { font-size: 2.5rem; margin: 10px 0; color: #fff; }
+.meta-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 12px; margin: 10px 0 20px; }
+.meta-item { background: #1a1a1a; border: 1px solid #2a2a2a; border-radius: 10px; padding: 10px 12px; display: flex; justify-content: space-between; align-items: center; }
+.meta-item span { color: #999; font-size: .85rem; }
+.meta-item strong { color: var(--gold-light); font-size: .95rem; }
+
+.price-box { 
+  background: #2a2a2a; padding: 20px; border-radius: 12px; 
+  margin: 25px 0; border-left: 5px solid var(--gold-primary); 
+}
+.price-box .label { margin: 0; color: #aaa; font-size: 0.9rem; }
+.price-value { display: flex; align-items: baseline; gap: 5px; margin-top: 5px; }
+.currency { color: var(--gold-primary); font-weight: bold; }
+.amount { font-size: 2.2rem; font-weight: 800; color: var(--gold-light); }
+.unit { color: #888; }
+
+.product-description { line-height: 1.8; color: #ccc; margin-bottom: 30px; font-size: 1rem; }
+.product-description h3 { color: var(--gold-primary); margin-top: 20px; }
+
+.wa-btn { 
+  display: inline-flex; align-items: center; gap: 10px;
+  background: #25D366; color: white; padding: 15px 35px; 
+  border-radius: 10px; text-decoration: none; font-weight: bold;
+  transition: 0.3s;
+}
+.wa-btn:hover { transform: translateY(-3px); box-shadow: 0 10px 20px rgba(37, 211, 102, 0.2); }
+
+@media (max-width: 768px) {
+  .product-container { grid-template-columns: 1fr; gap: 30px; padding: 20px; }
+  .product-title { font-size: 1.8rem; }
+  .meta-grid { grid-template-columns: 1fr; }
+}
+.wa-btn { width: auto; }
+@media (max-width: 480px) {
+  .product-detail-wrapper { margin: 20px auto; padding: 0 16px; }
+  .wa-btn { width: 100%; justify-content: center; }
+}
+@media (min-width: 1024px) {
+  .product-container { grid-template-columns: 1.2fr 0.8fr; gap: 40px; }
+  .main-image { max-height: 420px; }
+}
+</style>
