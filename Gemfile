@@ -1,12 +1,7 @@
 source "https://rubygems.org"
-
-gem "jekyll", "~> 4.3.4"
-gem "webrick"
-
+gem "jekyll"
+gem "jekyll-gh-pages" # Ini sangat penting agar cocok dengan lingkungan GitHub
 group :jekyll_plugins do
-  gem "jekyll-seo-tag"
-  gem "jekyll-sitemap"
   gem "jekyll-feed"
-  gem "jekyll-gist"  # Tambahkan baris ini!
-  gem "faraday-retry"
+  gem "jekyll-seo-tag"
 end
