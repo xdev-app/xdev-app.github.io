@@ -8,12 +8,7 @@ title: Home
   <p>{{ site.description }}</p>
 </section>
 
-{% include slideshow.html id="slideshow1" limit=5 autoplay=4000 %}
-
-{% slider bullets %}
-  ![Telur Ayam Lokal](/assets/images/telur-ayam-ras.jpg)
-  ![Telur Ayam Omega](/assets/images/telur-omega.jpg)
-{% endslider %}
+<!-- slideshow removed -->
 
 <div class="filter-container">
   <button class="filter-btn active" onclick="filterProduct('all')">Semua</button>

@@ -1,8 +1,14 @@
 source "https://rubygems.org"
+
 gem "jekyll", "~> 4.3"
-gem "jekyll-seo-tag"
-gem "jekyll-sitemap"
-gem "jekyll-feed"
-gem "jekyll-gist"
-gem "webrick"
-gem "jekyll-ideal-image-slider"
+
+group :jekyll_plugins do
+  gem "jekyll-seo-tag"
+  gem "jekyll-sitemap"
+  gem "jekyll-feed"
+  gem "jekyll-gist"
+end
+
+group :development do
+  gem "webrick", "~> 1.8"
+end
