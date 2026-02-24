@@ -54,9 +54,10 @@ highlighter: rouge
 
 # Daftar folder yang tidak perlu diproses Jekyll
 exclude:
+  - backend
+  - vendor
+  - .bundle
+  - .sass-cache
   - Gemfile
   - Gemfile.lock
   - node_modules
-  - vendor/
-  - .jekyll-cache/
-  - .github/
