@@ -790,4 +790,8 @@ main { margin-top: 100px; }
 .post { padding: 60px 20px; }
 .post-container { max-width: 900px; margin: 0 auto; }
 .post-content { color: #d0d0d0; line-height: 1.85; }
+.post-content img { max-width: 700px; width: 100%; height: auto; display: block; margin: 0 auto 16px; border-radius: 12px; }
+@media (max-width: 600px) {
+  .post-content img { max-width: 100%; border-radius: 10px; }
+}
 .post-actions { max-width: 900px; margin: 20px auto; }
