@@ -4,6 +4,7 @@ title: Katalog Produk Distributor
 ---
 
 <div class="product-grid">
+  {% include adsense.html %}
   {% for item in site.produk %}
   <div class="product-card" data-category="{{ item.kategori }}">
     <div class="product-badge">{{ item.stok }}</div>

@@ -9,6 +9,8 @@ description: Pantau ketersediaan stok pangan harian di Distributor Pangan Berkah
   <p>Pembaruan Terakhir: <span class="gold-text">{{ "now" | date: "%d %B %Y, %H:%M" }} WIB</span></p>
 </div>
 
+{% include adsense.html %}
+
 <div class="stock-status-container">
   <table class="stock-table">
     <thead>

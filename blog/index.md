@@ -5,6 +5,7 @@ title: Blog
 
 <section class="blog-list">
   <h2 class="section-title">Artikel Terbaru</h2>
+  {% include adsense.html %}
   <div class="posts">
     {% for post in site.posts %}
     <article class="post-card">

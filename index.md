@@ -8,6 +8,8 @@ title: Home
   <p>{{ site.description }}</p>
 </section>
 
+{% include adsense.html %}
+
 <!-- slideshow removed -->
 
 <div class="filter-container">
