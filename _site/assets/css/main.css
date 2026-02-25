@@ -307,9 +307,10 @@ tr:hover {
 
 /* Tombol Beli Sekarang dengan tampilan rapi & premium */
 .buy-btn {
-    display: block;
-    width: 100%;
-    padding: 14px 0;
+    display: inline-block;
+    width: auto;
+    max-width: 280px;
+    padding: 12px 20px;
     background: linear-gradient(135deg, #D4AF37 0%, #B8860B 100%);
     color: #000 !important;
     text-align: center;
@@ -640,6 +641,7 @@ main { margin-top: 100px; }
 }
 @media (max-width: 480px) {
     .product-grid { grid-template-columns: 1fr; gap: 20px; padding: 12px; }
+    .buy-btn { width: 100%; max-width: none; padding: 12px 0; }
 }
 .logo {
     display: inline-flex;

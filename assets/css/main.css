@@ -117,11 +117,14 @@ tr:hover {
 .btn-wa {
     background: linear-gradient(45deg, var(--gold-primary), var(--gold-light));
     color: #000 !important;
-    padding: 15px 40px;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    height: 44px;
+    padding: 0 24px;
     text-decoration: none;
-    border-radius: 5px;
+    border-radius: 6px;
     font-weight: 800;
-    display: inline-block;
     transition: 0.4s;
     box-shadow: 0 4px 15px rgba(212, 175, 55, 0.3);
 }
@@ -179,8 +182,12 @@ tr:hover {
 .nav-btn-wa {
     background: var(--gold-primary);
     color: #000 !important;
-    border-radius: 5px;
-    padding: 8px 20px !important;
+    border-radius: 6px;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    height: 40px;
+    padding: 0 16px !important;
     margin-left: 15px;
 }
 
@@ -307,9 +314,13 @@ tr:hover {
 
 /* Tombol Beli Sekarang dengan tampilan rapi & premium */
 .buy-btn {
-    display: block;
-    width: 100%;
-    padding: 14px 0;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: auto;
+    max-width: 280px;
+    height: 42px;
+    padding: 0 18px;
     background: linear-gradient(135deg, #D4AF37 0%, #B8860B 100%);
     color: #000 !important;
     text-align: center;
@@ -322,7 +333,6 @@ tr:hover {
     transition: all 0.3s ease;
     box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
     border: none;
-    min-height: 44px;
     touch-action: manipulation;
 }
 
@@ -640,6 +650,7 @@ main { margin-top: 100px; }
 }
 @media (max-width: 480px) {
     .product-grid { grid-template-columns: 1fr; gap: 20px; padding: 12px; }
+    .buy-btn { width: 100%; max-width: none; height: 44px; padding: 0; }
 }
 .logo {
     display: inline-flex;
@@ -750,10 +761,13 @@ main { margin-top: 100px; }
 .footer-contact .footer-wa {
     background: var(--gold-primary);
     color: #000;
-    padding: 10px 14px;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    height: 40px;
+    padding: 0 14px;
     border-radius: 6px;
     text-decoration: none;
-    display: inline-block;
     font-weight: 700;
 }
 .footer-bottom {
