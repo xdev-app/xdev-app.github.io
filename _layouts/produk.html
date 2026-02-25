@@ -4,13 +4,14 @@ layout: default
 
 <div class="product-detail-wrapper">
   {% include seo-produk.html %}
+  {% include seo-breadcrumb.html %}
   <nav class="breadcrumb">
     <a href="/katalog">← Kembali ke Katalog</a>
   </nav>
 
   <div class="product-container">
     <div class="product-image-section">
-      <img src="{{ page.foto | relative_url }}" alt="{{ page.title }}" class="main-image">
+      <img src="{{ page.foto | relative_url }}" alt="{{ page.title }}" class="main-image" loading="lazy" decoding="async">
       {% if page.stok == "Ready" %}
         <span class="status-badge">Tersedia</span>
       {% endif %}

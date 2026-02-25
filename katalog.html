@@ -10,7 +10,7 @@ title: Katalog Produk Distributor
     <div class="product-badge">{{ item.stok }}</div>
     
     <div class="product-image">
-      <img src="{{ item.foto | relative_url }}" alt="{{ item.title }}">
+      <img src="{{ item.foto | relative_url }}" alt="{{ item.title }}" loading="lazy" decoding="async">
     </div>
 
     <div class="product-info">

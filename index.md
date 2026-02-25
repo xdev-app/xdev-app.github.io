@@ -26,6 +26,7 @@ title: Home
     <div class="product-image">
       <img src="{{ '/assets/images/' | relative_url }}{{ item.foto }}" 
      alt="{{ item.produk }}" 
+     loading="lazy" decoding="async"
      onerror="this.src='https://placehold.co/600x400?text=Gambar+Kosong'">
     </div>
     <div class="product-info">
@@ -128,6 +129,8 @@ title: Home
     </div>
   </div>
 </section>
+
+{% include seo-faq.html %}
 
 <section class="logistics-details">
   <div class="container-split">

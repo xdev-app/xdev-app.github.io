@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html>
+<html lang="{{ site.lang | default: 'id-ID' }}">
 <head>
     <title>{{ page.title }}</title>
     <link rel="stylesheet" href="{{ '/assets/css/main.css' | relative_url }}">
@@ -9,6 +9,10 @@
     {% if site.adsense_client %}
     <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client={{ site.adsense_client }}" crossorigin="anonymous"></script>
     {% endif %}
+    {% if site.google_site_verification %}
+    <meta name="google-site-verification" content="{{ site.google_site_verification }}">
+    {% endif %}
+    {% include seo-business.html %}
 </head>
 <body>
     <header>

@@ -1,0 +1,20 @@
+{% assign phone_e164 = site.phone | prepend: '+' %}
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "WholesaleStore",
+  "name": "{{ site.social.name | default: site.title }}",
+  "url": "{{ site.url }}",
+  "image": "{{ site.url }}{{ site.logo }}",
+  "telephone": "{{ phone_e164 }}",
+  "address": {
+    "@type": "PostalAddress",
+    "streetAddress": "Jl. Pasirluhur No. 20",
+    "addressLocality": "Cimeunyan",
+    "addressRegion": "Jawa Barat",
+    "postalCode": "40192",
+    "addressCountry": "ID"
+  },
+  "sameAs": {{ site.social.links | jsonify }}
+}
+</script>
