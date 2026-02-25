@@ -399,6 +399,7 @@ tr:hover {
     padding: 15px;
     font-size: 0.8rem;
     border-bottom: 2px solid var(--gold-primary);
+    text-align: center;
 }
 
 .stock-table td {
