@@ -1,0 +1,229 @@
+<!DOCTYPE html>
+<html lang="id_ID">
+<head>
+    <title>Admin Update Harga</title>
+    <link rel="stylesheet" href="/assets/css/main.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="google-adsense-account" content="ca-pub-9216057952866489">
+    <!-- Begin Jekyll SEO tag v2.8.0 -->
+<title>Admin Update Harga | Agen Sembako Murah: Telur, Indomie &amp; Beras di Bandung</title>
+<meta name="generator" content="Jekyll v4.4.1" />
+<meta property="og:title" content="Admin Update Harga" />
+<meta name="author" content="Admin Pangan Berkah" />
+<meta property="og:locale" content="id_ID" />
+<meta name="description" content="Cari agen sembako termurah? Kami sediakan stok telur, Indomie, dan beras kualitas super dengan harga grosir. Cocok untuk stok warung atau dijual kembali!" />
+<meta property="og:description" content="Cari agen sembako termurah? Kami sediakan stok telur, Indomie, dan beras kualitas super dengan harga grosir. Cocok untuk stok warung atau dijual kembali!" />
+<link rel="canonical" href="http://localhost:4000/admin/harga/" />
+<meta property="og:url" content="http://localhost:4000/admin/harga/" />
+<meta property="og:site_name" content="Agen Sembako Murah: Telur, Indomie &amp; Beras di Bandung" />
+<meta property="og:image" content="http://localhost:4000/assets/images/hero-bg.jpg" />
+<meta property="og:type" content="website" />
+<meta name="twitter:card" content="summary_large_image" />
+<meta property="twitter:image" content="http://localhost:4000/assets/images/hero-bg.jpg" />
+<meta property="twitter:title" content="Admin Update Harga" />
+<meta name="google-site-verification" content="1zeyth0y69wfwBjq8zzUsMdsBmbspGA6rG8dfEt1jt4" />
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"WebPage","author":{"@type":"Person","name":"Admin Pangan Berkah"},"description":"Cari agen sembako termurah? Kami sediakan stok telur, Indomie, dan beras kualitas super dengan harga grosir. Cocok untuk stok warung atau dijual kembali!","headline":"Admin Update Harga","image":"http://localhost:4000/assets/images/hero-bg.jpg","publisher":{"@type":"Organization","logo":{"@type":"ImageObject","url":"http://localhost:4000/assets/images/logo.svg"},"name":"Admin Pangan Berkah"},"url":"http://localhost:4000/admin/harga/"}</script>
+<!-- End Jekyll SEO tag -->
+
+    
+    <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-9216057952866489" crossorigin="anonymous"></script>
+    
+    
+    <meta name="google-site-verification" content="1zeyth0y69wfwBjq8zzUsMdsBmbspGA6rG8dfEt1jt4">
+    
+    
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "WholesaleStore",
+  "name": "Distributor Pangan Berkah",
+  "url": "http://localhost:4000",
+  "image": "http://localhost:4000/assets/images/logo.svg",
+  "telephone": "+6285177010004",
+  "address": {
+    "@type": "PostalAddress",
+    "streetAddress": "Jl. Pasirluhur No. 20",
+    "addressLocality": "Cimeunyan",
+    "addressRegion": "Jawa Barat",
+    "postalCode": "40192",
+    "addressCountry": "ID"
+  },
+  "sameAs": ["https://facebook.com/panganberkah","https://instagram.com/panganberkah"]
+}
+</script>
+
+</head>
+<body>
+    <header>
+    <nav class="navbar">
+        <a href="/" class="logo">
+            <img src="/assets/images/logo.svg" alt="Alfutuhaat">
+        </a>
+        
+        <input type="checkbox" id="check">
+        <label for="check" class="checkbtn">
+            <span></span>
+            <span></span>
+            <span></span>
+        </label>
+
+        <ul class="nav-links">
+            <li><a href="/">Home</a></li>
+            <li><a href="/katalog">Katalog</a></li>
+            <li><a href="/blog">Blog</a></li>
+            <li><a href="/update">Update Stok</a></li>
+            <li><a href="https://wa.me/6285177010004" class="nav-btn-wa">Order Now</a></li>
+        </ul>
+    </nav>
+</header>
+
+    <main style="padding: 20px 5%;">
+        <section class="update-header">
+  <h1>Admin Update Harga</h1>
+  <p>Masukkan GitHub Personal Access Token (PAT) untuk menyimpan perubahan ke <strong>_data/harga.yml</strong>. Token tidak disimpan di server.</p>
+</section>
+
+<div class="stock-status-container" style="padding:20px;">
+  <div style="margin-bottom:15px;">
+    <label for="pat" style="display:block; color:#ccc; margin-bottom:6px;">GitHub PAT (repo scope):</label>
+    <input id="pat" type="password" placeholder="token" style="width:100%; max-width:420px; padding:10px; border-radius:6px; border:1px solid #333; background:#1a1a1a; color:#e0e0e0;">
+  </div>
+  <table class="stock-table" id="priceTable">
+    <thead>
+      <tr>
+        <th>Produk</th>
+        <th>Kategori</th>
+        <th>Harga</th>
+        <th>Satuan</th>
+        <th>Stok</th>
+        <th>Foto</th>
+        <th>Aksi</th>
+      </tr>
+    </thead>
+    <tbody></tbody>
+  </table>
+  <div style="margin-top:15px;">
+    <button id="addRow" class="share-btn">Tambah Baris</button>
+    <button id="saveBtn" class="btn-wa" style="margin-left:10px;">Simpan ke GitHub</button>
+  </div>
+</div>
+
+<script>
+const items = [{"produk":"Telur Ayam Lokal","harga":"28.800","satuan":"kg","stok":"Ready","kategori":"Fresh Product","foto":"telur-ayam-ras.jpg"},{"produk":"Telur Ayam Omega","harga":"32.000","satuan":"kg","stok":"Ready","kategori":"Fresh Product","foto":"telur-omega.jpg"}];
+const owner = "xdev-app";
+const repo = "xdev-app.github.io";
+const path = "_data/harga.yml";
+const branch = "main";
+
+function render() {
+  const tbody = document.querySelector("#priceTable tbody");
+  tbody.innerHTML = "";
+  items.forEach((it, idx) => {
+    const tr = document.createElement("tr");
+    tr.innerHTML = `
+      <td><input value="${it.produk || ""}" data-k="produk" data-i="${idx}" style="width:180px"></td>
+      <td><input value="${it.kategori || ""}" data-k="kategori" data-i="${idx}" style="width:160px"></td>
+      <td><input value="${it.harga || ""}" data-k="harga" data-i="${idx}" style="width:120px"></td>
+      <td><input value="${it.satuan || ""}" data-k="satuan" data-i="${idx}" style="width:80px"></td>
+      <td><input value="${it.stok || ""}" data-k="stok" data-i="${idx}" style="width:100px"></td>
+      <td><input value="${it.foto || ""}" data-k="foto" data-i="${idx}" style="width:160px"></td>
+      <td><button class="share-btn" data-del="${idx}">Hapus</button></td>
+    `;
+    tbody.appendChild(tr);
+  });
+}
+render();
+
+document.addEventListener("input", (e) => {
+  const k = e.target.getAttribute("data-k");
+  const i = e.target.getAttribute("data-i");
+  if (k && i !== null) {
+    items[Number(i)][k] = e.target.value;
+  }
+});
+
+document.addEventListener("click", (e) => {
+  const del = e.target.getAttribute("data-del");
+  if (del !== null) {
+    items.splice(Number(del), 1);
+    render();
+  }
+});
+
+document.getElementById("addRow").addEventListener("click", () => {
+  items.push({ produk:"", kategori:"", harga:"", satuan:"", stok:"", foto:"" });
+  render();
+});
+
+function toYAML(arr) {
+  let out = "";
+  arr.forEach(obj => {
+    out += `- produk: "${(obj.produk||"").replace(/"/g,'\\"')}"\n`;
+    out += `  harga: "${(obj.harga||"").replace(/"/g,'\\"')}"\n`;
+    out += `  satuan: "${(obj.satuan||"").replace(/"/g,'\\"')}"\n`;
+    out += `  stok: "${(obj.stok||"").replace(/"/g,'\\"')}"\n`;
+    out += `  kategori: "${(obj.kategori||"").replace(/"/g,'\\"')}"\n`;
+    out += `  foto: "${(obj.foto||"").replace(/"/g,'\\"')}"\n\n`;
+  });
+  return out.trim() + "\n";
+}
+
+async function saveToGitHub() {
+  const token = document.getElementById("pat").value.trim();
+  if (!token) { alert("Masukkan PAT GitHub terlebih dahulu"); return; }
+  const headers = { "Authorization": `token ${token}`, "Accept":"application/vnd.github+json" };
+  const url = `https://api.github.com/repos/${owner}/${repo}/contents/${path}`;
+  const getResp = await fetch(url, { headers });
+  if (!getResp.ok) { alert("Gagal mengambil file: " + getResp.status); return; }
+  const file = await getResp.json();
+  const yaml = toYAML(items);
+  const content = btoa(unescape(encodeURIComponent(yaml)));
+  const body = {
+    message: "Update harga via Admin Panel",
+    content,
+    sha: file.sha,
+    branch
+  };
+  const putResp = await fetch(url, { method:"PUT", headers: { ...headers, "Content-Type":"application/json" }, body: JSON.stringify(body) });
+  if (putResp.ok) {
+    alert("Berhasil menyimpan. Perubahan akan terpublikasi setelah build selesai.");
+  } else {
+    const t = await putResp.text();
+    alert("Gagal menyimpan: " + putResp.status + " " + t);
+  }
+}
+document.getElementById("saveBtn").addEventListener("click", saveToGitHub);
+</script>
+
+    </main>
+
+    <footer class="site-footer">
+  <div class="footer-inner">
+    <div class="footer-brand">
+      <div class="logo">DII AGG</div>
+      <p>Distributor Telur, Indomie, dan Beras</p>
+    </div>
+    <div class="footer-links">
+      <a href="/">Home</a>
+      <a href="/katalog">Katalog</a>
+      <a href="/update">Update Stok</a>
+      <a href="/harga-update">Update Harga</a>
+      <a href="/admin/harga">Admin Harga</a>
+      <a href="/about">Tentang</a>
+      <a href="/contact">Kontak</a>
+      <a href="/privacy">Privasi</a>
+      <a href="/terms">Ketentuan</a>
+    </div>
+    <div class="footer-contact">
+      <a href="https://wa.me/6285177010004" class="footer-wa">Hubungi via WhatsApp</a>
+      <p>Jl. Pasirluhur No. 20, Padasuka, Cimeunyan, Kab. Bandung 40192</p>
+    </div>
+  </div>
+  <div class="footer-bottom">
+    <span>&copy; 2026 Alfutuhaat Agen Telur, Indomie dan Beras</span>
+  </div>
+</footer>
+
+</body>
+</html>

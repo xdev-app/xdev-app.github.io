@@ -117,11 +117,14 @@ tr:hover {
 .btn-wa {
     background: linear-gradient(45deg, var(--gold-primary), var(--gold-light));
     color: #000 !important;
-    padding: 15px 40px;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    height: 44px;
+    padding: 0 24px;
     text-decoration: none;
-    border-radius: 5px;
+    border-radius: 6px;
     font-weight: 800;
-    display: inline-block;
     transition: 0.4s;
     box-shadow: 0 4px 15px rgba(212, 175, 55, 0.3);
 }
@@ -179,8 +182,12 @@ tr:hover {
 .nav-btn-wa {
     background: var(--gold-primary);
     color: #000 !important;
-    border-radius: 5px;
-    padding: 8px 20px !important;
+    border-radius: 6px;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    height: 40px;
+    padding: 0 16px !important;
     margin-left: 15px;
 }
 
@@ -307,10 +314,13 @@ tr:hover {
 
 /* Tombol Beli Sekarang dengan tampilan rapi & premium */
 .buy-btn {
-    display: inline-block;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
     width: auto;
     max-width: 280px;
-    padding: 12px 20px;
+    height: 42px;
+    padding: 0 18px;
     background: linear-gradient(135deg, #D4AF37 0%, #B8860B 100%);
     color: #000 !important;
     text-align: center;
@@ -323,7 +333,6 @@ tr:hover {
     transition: all 0.3s ease;
     box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
     border: none;
-    min-height: 44px;
     touch-action: manipulation;
 }
 
@@ -390,11 +399,16 @@ tr:hover {
     padding: 15px;
     font-size: 0.8rem;
     border-bottom: 2px solid var(--gold-primary);
+    text-align: center;
 }
 
 .stock-table td {
     padding: 15px;
     border-bottom: 1px solid #2a2a2a;
+}
+.stock-table td:nth-child(2),
+.stock-table td:nth-child(3) {
+    text-align: center;
 }
 
 .prod-name { font-weight: 600; color: #fff; }
@@ -425,6 +439,9 @@ tr:hover {
     transition: 0.3s;
 }
 .share-btn:hover { background: #25d366; color: #fff; }
+
+.ad-banner { margin: 20px auto; max-width: 1100px; padding: 0 20px; }
+.ad-placeholder { background: #181818; color: #777; border: 1px dashed #444; border-radius: 12px; min-height: 120px; display: flex; align-items: center; justify-content: center; }
 
 
 /* Styling Logistik & Pengiriman */
@@ -641,7 +658,7 @@ main { margin-top: 100px; }
 }
 @media (max-width: 480px) {
     .product-grid { grid-template-columns: 1fr; gap: 20px; padding: 12px; }
-    .buy-btn { width: 100%; max-width: none; padding: 12px 0; }
+    .buy-btn { width: 100%; max-width: none; height: 44px; padding: 0; }
 }
 .logo {
     display: inline-flex;
@@ -752,10 +769,13 @@ main { margin-top: 100px; }
 .footer-contact .footer-wa {
     background: var(--gold-primary);
     color: #000;
-    padding: 10px 14px;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    height: 40px;
+    padding: 0 14px;
     border-radius: 6px;
     text-decoration: none;
-    display: inline-block;
     font-weight: 700;
 }
 .footer-bottom {
@@ -778,4 +798,8 @@ main { margin-top: 100px; }
 .post { padding: 60px 20px; }
 .post-container { max-width: 900px; margin: 0 auto; }
 .post-content { color: #d0d0d0; line-height: 1.85; }
+.post-content img { max-width: 700px; width: 100%; height: auto; display: block; margin: 0 auto 16px; border-radius: 12px; }
+@media (max-width: 600px) {
+  .post-content img { max-width: 100%; border-radius: 10px; }
+}
 .post-actions { max-width: 900px; margin: 20px auto; }
