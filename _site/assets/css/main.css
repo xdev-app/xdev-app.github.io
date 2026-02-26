@@ -219,6 +219,8 @@ tr:hover {
     padding: 60px 20px;
     background: linear-gradient(rgba(0,0,0,0.7), rgba(0,0,0,0.7)), url('/assets/images/hero-bg.jpg');
     background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
     margin-bottom: 40px;
     border-bottom: 3px solid var(--gold-primary);
 }
