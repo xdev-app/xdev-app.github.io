@@ -7,6 +7,7 @@ group :jekyll_plugins do
   gem "jekyll-sitemap"
   gem "jekyll-feed"
   gem "jekyll-gist"
+  gem 'faraday-retry'
 end
 
 group :development do
