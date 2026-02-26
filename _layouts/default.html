@@ -5,6 +5,7 @@
     <link rel="stylesheet" href="{{ '/assets/css/main.css' | relative_url }}">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta name="google-adsense-account" content="{{ site.adsense_client }}">
+    {% if page.noindex %}<meta name="robots" content="noindex, nofollow">{% endif %}
     {% seo %}
     {% if site.adsense_client %}
     <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client={{ site.adsense_client }}" crossorigin="anonymous"></script>
