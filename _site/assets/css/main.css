@@ -603,9 +603,9 @@ tr:hover {
 }
 @media (max-width: 768px) {
     body { font-size: 16px; line-height: 1.7; }
-    h1 { font-size: 2rem; }
-    h2 { font-size: 1.6rem; }
-    h3 { font-size: 1.25rem; }
+    h1 { font-size: 1.6rem; }
+    h2 { font-size: 1.25rem; }
+    h3 { font-size: 1rem; }
 }
 
 /* MEDIA QUERY (Tampilan Mobile < 858px) */
