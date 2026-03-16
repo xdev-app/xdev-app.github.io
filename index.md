@@ -137,11 +137,8 @@ title: Home
     
     <div class="map-section">
       <h3 class="gold-text">Lokasi Pusat Distribusi</h3>
-      <div class="map-wrapper">
-        <iframe 
-          src="https://www.google.com/maps?q=Jl.%20Pasirluhur%20No.%2020,%20Padasuka,%20Cimeunyan,%20Kab.%20Bandung%2040192&output=embed" 
-          width="100%" height="300" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade">
-        </iframe>
+      <div class="map-wrapper">        
+    <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d247.5727237747617!2d107.58088513134066!3d-6.8709940553840845!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x2e68e7e8737759af%3A0xa7dd0ef8c03bd29a!2sTukang%20Endog%2C%20Mie%20dan%20Beas%20Bandung!5e0!3m2!1sid!2sid!4v1773630645529!5m2!1sid!2sid" width="100%" height="300" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
       </div>
     </div>
 
