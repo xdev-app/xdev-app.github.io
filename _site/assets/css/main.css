@@ -301,7 +301,7 @@ tr:hover {
 }
 
 .hero p {
-    font-size: clamp(1rem, 2vw, 1.2rem);
+    font-size: clamp(0.8rem, 2vw, 1.2rem);
     color: var(--gold-light);
     max-width: 700px;
     margin: 0 auto 35px;
