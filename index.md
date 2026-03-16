@@ -4,9 +4,22 @@ title: Home
 ---
 
 <section class="hero">
-  <h1>{{ site.title }}</h1>
-  <p>{{ site.description }}</p>
+  <div class="hero-content">
+    <h1>Stok Melimpah, Kirim Tepat Waktu: 
+      <span>Telur, Indomie & Beras Berkualitas</span>
+    </h1>
+    <p>Distributor sembako resmi area Bandung & sekitarnya. Kami menjamin ketersediaan stok harian dan pengiriman langsung ke lokasi Anda.</p>
+    
+    <a href="https://wa.me/{{ site.phone }}?text=Halo%20Alfutuhaat,%20saya%20ingin%20tanya%20stok%20hari%20ini" class="buy-btn hero-cta">
+       Hubungi via WhatsApp
+    </a>
+  </div>
+
+  <div class="scroll-indicator" onclick="window.scrollBy({top: 600, behavior: 'smooth'})">
+    <i class="fas fa-chevron-down"></i> ⌄
+  </div>
 </section>
+
 
 {% include adsense.html %}
 
