@@ -335,7 +335,7 @@ tr:hover {
 .hero-cta {
     margin-top: 30px;
     padding: 15px 40px !important; /* Lebih besar dari tombol produk */
-    font-size: 1.1rem !important;
+    font-size: 0.8rem !important;
     height: auto !important; /* Agar padding berfungsi maksimal */
     border-radius: 50px !important; /* Membuat bentuk pill yang modern */
 }
