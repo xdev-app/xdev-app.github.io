@@ -25,9 +25,26 @@ title: Home
 
 <!-- slideshow removed -->
 
+<section class="featured-products" style="text-align: center; padding: 60px 0 30px;">
+  <div class="container">
+    <h2 class="section-title">Produk Unggulan Kami</h2>
+    <div style="max-width: 800px; margin: 0 auto;">
+      <p style="color: var(--gold-light); font-weight: bold; margin-bottom: 15px;">
+        Suplai Telur Segar, Beras Premium, dan Mie Instan Terlengkap
+      </p>
+      <p style="line-height: 1.6; color: #555;">
+        Sebagai distributor resmi di Bandung, kami fokus menyediakan <strong>Telur Ayam Ras</strong> dari kandang pilihan, 
+        <strong>Beras Kualitas Super</strong>, dan stok <strong>Indomie</strong> melimpah untuk kebutuhan agen, grosir, maupun retail.
+      </p>
+    </div>
+  </div>
+</section>
+
+
+
 <div class="filter-container">
   <button class="filter-btn active" onclick="filterProduct('all')">Semua</button>
-  <button class="filter-btn" onclick="filterProduct('Fresh Product')">Telur & Segar</button>
+  <button class="filter-btn" onclick="filterProduct('Fresh Product')">Telur</button>
   <button class="filter-btn" onclick="filterProduct('Rice & Grains')">Beras</button>
   <button class="filter-btn" onclick="filterProduct('Mie Instan')">Mie Instan</button>
 </div>

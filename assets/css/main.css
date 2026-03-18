@@ -775,7 +775,7 @@ tr:hover {
     #check:checked ~ .nav-links {
         left: 0;
     }
-    
+
     /* Animasi Hamburger jadi Silang (Opsional) */
     #check:checked ~ .checkbtn span:nth-child(1) { transform: rotate(45deg) translate(5px, 6px); }
     #check:checked ~ .checkbtn span:nth-child(2) { opacity: 0; }
