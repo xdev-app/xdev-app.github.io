@@ -106,6 +106,61 @@
 </div>
 
 <!-- slideshow removed -->
+<div class="slideshow-container">
+  
+  <div class="mySlides fade">
+    <img src="/assets/images/telur-ayam-lokal.jpg" style="width:100%" />
+    <div class="text-caption">Stok Telur Segar Setiap Hari</div>
+  </div>
+  
+  <div class="mySlides fade">
+    <img src="/assets/images/telur-ayam-omega-lokal.jpg" style="width:100%" />
+    <div class="text-caption">Telur Omega</div>
+  </div>
+  
+  <div class="mySlides fade">
+    <img src="/assets/images/indomie-all-varian.jpg" style="width:100%" />
+    <div class="text-caption">Distributor Indomie Terlengkap</div>
+  </div>
+  
+  <div class="mySlides fade">
+    <img src="/assets/images/beras-25kg.jpg" style="width:100%" />
+    <div class="text-caption">Beras Premium Kualitas Super</div>
+  </div>
+  
+
+  <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+  <a class="next" onclick="plusSlides(1)">&#10095;</a>
+</div>
+
+<style>
+.slideshow-container { max-width: 1000px; position: relative; margin: auto; overflow: hidden; border-radius: 10px; }
+.mySlides { display: none; }
+.mySlides img { height: 545px; object-fit: cover; }
+.prev, .next { cursor: pointer; position: absolute; top: 50%; width: auto; padding: 16px; margin-top: -22px; color: white; font-weight: bold; font-size: 18px; transition: 0.6s ease; border-radius: 0 3px 3px 0; user-select: none; background: rgba(0,0,0,0.3); }
+.next { right: 0; border-radius: 3px 0 0 3px; }
+.prev:hover, .next:hover { background-color: rgba(0,0,0,0.8); }
+.text-caption { color: #f2f2f2; font-size: 15px; padding: 8px 12px; position: absolute; bottom: 8px; width: 100%; text-align: center; background: rgba(0,0,0,0.5); }
+.fade { animation-name: fade; animation-duration: 1.5s; }
+@keyframes fade { from {opacity: .4} to {opacity: 1} }
+</style>
+
+<script>
+let slideIndex = 1;
+showSlides(slideIndex);
+
+function plusSlides(n) { showSlides(slideIndex += n); }
+function showSlides(n) {
+  let i;
+  let slides = document.getElementsByClassName("mySlides");
+  if (n > slides.length) {slideIndex = 1}
+  if (n < 1) {slideIndex = slides.length}
+  for (i = 0; i < slides.length; i++) { slides[i].style.display = "none"; }
+  slides[slideIndex-1].style.display = "block";
+}
+// Auto-play (opsional)
+setInterval(() => { plusSlides(1); }, 5000);
+</script>
 
 <section class="featured-products" style="text-align: center; padding: 60px 0 30px;">
   <div class="container">
@@ -134,14 +189,14 @@
   <div class="product-card" data-category="Fresh Product">
     <div class="product-badge">Ready</div>
     <div class="product-image">
-      <img src="/assets/images/telur-ayam-ras.jpg" alt="Telur Ayam Lokal" loading="lazy" decoding="async" onerror="this.src='https://placehold.co/600x400?text=Gambar+Kosong'" />
+      <img src="/assets/images/telur-ayam-lokal.jpg" alt="Telur Ayam Lokal" loading="lazy" decoding="async" onerror="this.src='https://placehold.co/600x400?text=Gambar+Kosong'" />
     </div>
     <div class="product-info">
       <span class="category">Fresh Product</span>
       <h3>Telur Ayam Lokal</h3>
       <div class="price-tag">
         <span class="currency">Rp</span>
-        <span class="amount">28.500</span>
+        <span class="amount">27.800</span>
         <span class="unit">/kg</span>
       </div>
       <a href="https://wa.me/6285177010004?text=Halo,%20saya%20ingin%20pesan%20Telur Ayam Lokal" class="buy-btn">
@@ -153,17 +208,55 @@
   <div class="product-card" data-category="Fresh Product">
     <div class="product-badge">Ready</div>
     <div class="product-image">
-      <img src="/assets/images/telur-omega.jpg" alt="Telur Ayam Omega" loading="lazy" decoding="async" onerror="this.src='https://placehold.co/600x400?text=Gambar+Kosong'" />
+      <img src="/assets/images/telur-ayam-omega-lokal.jpg" alt="Telur Ayam Omega" loading="lazy" decoding="async" onerror="this.src='https://placehold.co/600x400?text=Gambar+Kosong'" />
     </div>
     <div class="product-info">
       <span class="category">Fresh Product</span>
       <h3>Telur Ayam Omega</h3>
       <div class="price-tag">
         <span class="currency">Rp</span>
-        <span class="amount">29.500</span>
+        <span class="amount">28.500</span>
         <span class="unit">/kg</span>
       </div>
       <a href="https://wa.me/6285177010004?text=Halo,%20saya%20ingin%20pesan%20Telur Ayam Omega" class="buy-btn">
+         Beli Sekarang
+      </a>
+    </div>
+  </div>
+  
+  <div class="product-card" data-category="Fresh Product">
+    <div class="product-badge">Ready</div>
+    <div class="product-image">
+      <img src="/assets/images/indomie-all-varian.jpg" alt="Mie Instan" loading="lazy" decoding="async" onerror="this.src='https://placehold.co/600x400?text=Gambar+Kosong'" />
+    </div>
+    <div class="product-info">
+      <span class="category">Fresh Product</span>
+      <h3>Mie Instan</h3>
+      <div class="price-tag">
+        <span class="currency">Rp</span>
+        <span class="amount">Tersedia</span>
+        <span class="unit">/Karton</span>
+      </div>
+      <a href="https://wa.me/6285177010004?text=Halo,%20saya%20ingin%20pesan%20Mie Instan" class="buy-btn">
+         Beli Sekarang
+      </a>
+    </div>
+  </div>
+  
+  <div class="product-card" data-category="Fresh Product">
+    <div class="product-badge">Ready</div>
+    <div class="product-image">
+      <img src="/assets/images/beras-25kg.jpg" alt="Beras" loading="lazy" decoding="async" onerror="this.src='https://placehold.co/600x400?text=Gambar+Kosong'" />
+    </div>
+    <div class="product-info">
+      <span class="category">Fresh Product</span>
+      <h3>Beras</h3>
+      <div class="price-tag">
+        <span class="currency">Rp</span>
+        <span class="amount">Tersedia</span>
+        <span class="unit">/Karung</span>
+      </div>
+      <a href="https://wa.me/6285177010004?text=Halo,%20saya%20ingin%20pesan%20Beras" class="buy-btn">
          Beli Sekarang
       </a>
     </div>
@@ -215,15 +308,104 @@
           <tr>
             <td class="prod-name">Telur Ayam Lokal</td>
             <td>Fresh Product</td>
-            <td class="gold-text">Rp 28.500</td>
+            <td class="gold-text">Rp 27.800</td>
             <td>kg</td>
           </tr>
           
           <tr>
             <td class="prod-name">Telur Ayam Omega</td>
             <td>Fresh Product</td>
-            <td class="gold-text">Rp 29.500</td>
+            <td class="gold-text">Rp 28.500</td>
             <td>kg</td>
+          </tr>
+          
+          <tr>
+            <td class="prod-name">Mie Instan</td>
+            <td>Fresh Product</td>
+            <td class="gold-text">Rp Tersedia</td>
+            <td>Karton</td>
+          </tr>
+          
+          <tr>
+            <td class="prod-name">Beras</td>
+            <td>Fresh Product</td>
+            <td class="gold-text">Rp Tersedia</td>
+            <td>Karung</td>
+          </tr>
+          
+        </tbody>
+      </table>
+    </div>
+  </div>
+</section>
+
+<section class="retail-price-section">
+  <div class="container">
+    <h2 class="section-title">Live Price List</h2>
+    <div class="price-update-info">
+      <span class="live-pulse"></span>
+      <p>Harga diperbarui secara berkala: <strong id="live-date"></strong></p>
+    </div>
+    
+    <div class="table-container">
+      <table class="retail-table">
+        <thead>
+          <tr>
+            <th>Komoditas</th>
+            <th>Kategori</th>
+            <th>Harga Retail</th>
+            <th>Satuan</th>
+            <th>Status</th>
+          </tr>
+        </thead>
+        <tbody>
+          
+          <tr>
+            <td class="prod-name"><strong>Telur Ayam Lokal</strong></td>
+            <td><span class="category-badge">Fresh Product</span></td>
+            <td class="gold-text">Rp 27.800</td>
+            <td>kg</td>
+            <td>
+              
+                <span class="status-tag update">↑ Berubah</span>
+              
+            </td>
+          </tr>
+          
+          <tr>
+            <td class="prod-name"><strong>Telur Ayam Omega</strong></td>
+            <td><span class="category-badge">Fresh Product</span></td>
+            <td class="gold-text">Rp 28.500</td>
+            <td>kg</td>
+            <td>
+              
+                <span class="status-tag update">↑ Berubah</span>
+              
+            </td>
+          </tr>
+          
+          <tr>
+            <td class="prod-name"><strong>Mie Instan</strong></td>
+            <td><span class="category-badge">Fresh Product</span></td>
+            <td class="gold-text">Rp Tersedia</td>
+            <td>Karton</td>
+            <td>
+              
+                <span class="status-tag update">↑ Berubah</span>
+              
+            </td>
+          </tr>
+          
+          <tr>
+            <td class="prod-name"><strong>Beras</strong></td>
+            <td><span class="category-badge">Fresh Product</span></td>
+            <td class="gold-text">Rp Tersedia</td>
+            <td>Karung</td>
+            <td>
+              
+                <span class="status-tag update">↑ Berubah</span>
+              
+            </td>
           </tr>
           
         </tbody>

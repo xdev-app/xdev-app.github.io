@@ -1,0 +1,40 @@
+<div class="slideshow-container">
+  {% for slide in site.data.slides %}
+  <div class="mySlides fade">
+    <img src="{{ slide.image | relative_url }}" style="width:100%">
+    <div class="text-caption">{{ slide.caption }}</div>
+  </div>
+  {% endfor %}
+
+  <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+  <a class="next" onclick="plusSlides(1)">&#10095;</a>
+</div>
+
+<style>
+.slideshow-container { max-width: 1000px; position: relative; margin: auto; overflow: hidden; border-radius: 10px; }
+.mySlides { display: none; }
+.mySlides img { height: 545px; object-fit: cover; }
+.prev, .next { cursor: pointer; position: absolute; top: 50%; width: auto; padding: 16px; margin-top: -22px; color: white; font-weight: bold; font-size: 18px; transition: 0.6s ease; border-radius: 0 3px 3px 0; user-select: none; background: rgba(0,0,0,0.3); }
+.next { right: 0; border-radius: 3px 0 0 3px; }
+.prev:hover, .next:hover { background-color: rgba(0,0,0,0.8); }
+.text-caption { color: #f2f2f2; font-size: 15px; padding: 8px 12px; position: absolute; bottom: 8px; width: 100%; text-align: center; background: rgba(0,0,0,0.5); }
+.fade { animation-name: fade; animation-duration: 1.5s; }
+@keyframes fade { from {opacity: .4} to {opacity: 1} }
+</style>
+
+<script>
+let slideIndex = 1;
+showSlides(slideIndex);
+
+function plusSlides(n) { showSlides(slideIndex += n); }
+function showSlides(n) {
+  let i;
+  let slides = document.getElementsByClassName("mySlides");
+  if (n > slides.length) {slideIndex = 1}
+  if (n < 1) {slideIndex = slides.length}
+  for (i = 0; i < slides.length; i++) { slides[i].style.display = "none"; }
+  slides[slideIndex-1].style.display = "block";
+}
+// Auto-play (opsional)
+setInterval(() => { plusSlides(1); }, 5000);
+</script>

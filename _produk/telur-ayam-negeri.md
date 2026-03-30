@@ -1,11 +1,11 @@
 ---
 layout: produk
 title: "Telur Ayam Lokal"
-harga: "28.500"
+harga: "27.800"
 satuan: "kg"
 stok: "Ready"
 kategori: "Fresh Product"
-foto: "/assets/images/telur-ayam-ras.jpg"
+foto: "/assets/images/telur-ayam-lokal.jpg"
 ---
 
 Kami adalah agen sembako telur ayam lokal dengan kualitas **Baik**. Telur kami selalu baru setiap harinya karena diambil langsung dari mitra peternak.

@@ -24,7 +24,7 @@ title: Home
 {% include adsense.html %}
 
 <!-- slideshow removed -->
-
+{% include slideshow.html %}
 <section class="featured-products" style="text-align: center; padding: 60px 0 30px;">
   <div class="container">
     <h2 class="section-title">Produk Unggulan Kami</h2>
@@ -121,6 +121,47 @@ title: Home
             <td>{{ item.kategori }}</td>
             <td class="gold-text">Rp {{ item.harga }}</td>
             <td>{{ item.satuan }}</td>
+          </tr>
+          {% endfor %}
+        </tbody>
+      </table>
+    </div>
+  </div>
+</section>
+
+<section class="retail-price-section">
+  <div class="container">
+    <h2 class="section-title">Live Price List</h2>
+    <div class="price-update-info">
+      <span class="live-pulse"></span>
+      <p>Harga diperbarui secara berkala: <strong id="live-date"></strong></p>
+    </div>
+    
+    <div class="table-container">
+      <table class="retail-table">
+        <thead>
+          <tr>
+            <th>Komoditas</th>
+            <th>Kategori</th>
+            <th>Harga Retail</th>
+            <th>Satuan</th>
+            <th>Status</th>
+          </tr>
+        </thead>
+        <tbody>
+          {% for item in site.data.harga %}
+          <tr>
+            <td class="prod-name"><strong>{{ item.produk }}</strong></td>
+            <td><span class="category-badge">{{ item.kategori }}</span></td>
+            <td class="gold-text">Rp {{ item.harga }}</td>
+            <td>{{ item.satuan }}</td>
+            <td>
+              {% if item.stok == "Tersedia" %}
+                <span class="status-tag stable">✓ Stabil</span>
+              {% else %}
+                <span class="status-tag update">↑ Berubah</span>
+              {% endif %}
+            </td>
           </tr>
           {% endfor %}
         </tbody>

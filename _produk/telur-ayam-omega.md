@@ -1,11 +1,11 @@
 ---
 layout: produk
 title: "Telur Ayam Omega"
-harga: "29.500"
+harga: "28.500"
 satuan: "kg"
 stok: "Ready"
 kategori: "Fresh Product"
-foto: "/assets/images/telur-omega.jpg"
+foto: "/assets/images/telur-ayam-omega-lokal.jpg"
 ---
 
 Kami adalah agen sembako telur ayam omega dengan kualitas **Baik**. Telur kami selalu baru setiap harinya karena diambil langsung dari mitra peternak.
