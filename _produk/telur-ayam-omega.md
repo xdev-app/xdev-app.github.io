@@ -1,7 +1,7 @@
 ---
 layout: produk
 title: "Telur Ayam Omega"
-harga: "28.500"
+harga: "27.500"
 satuan: "kg"
 stok: "Ready"
 kategori: "Fresh Product"

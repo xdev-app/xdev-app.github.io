@@ -1,7 +1,7 @@
 ---
 layout: produk
 title: "Telur Ayam Lokal"
-harga: "27.800"
+harga: "26.500"
 satuan: "kg"
 stok: "Ready"
 kategori: "Fresh Product"
