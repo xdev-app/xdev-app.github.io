@@ -11,7 +11,7 @@ telur_omega:
   produk: "Telur Ayam Omega"
   harga: "27.500"
   satuan: "kg"
-  stok: "Ready"
+  stok: "Empty"
   kategori: "Fresh Product"
   foto: "telur-ayam-omega-lokal.jpg"
 
@@ -27,6 +27,6 @@ beras_premium:
   produk: "Beras"
   harga: "Tersedia"
   satuan: "Karung"
-  stok: "Ready"
+  stok: "Empty"
   kategori: "Rice & Grains"
   foto: "beras-25kg.jpg"
