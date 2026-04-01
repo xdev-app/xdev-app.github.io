@@ -1,25 +1,30 @@
-- produk: "Telur Ayam Lokal"
+# Simpan di _data/harga.yml
+telur_lokal:
+  produk: "Telur Ayam Lokal"
   harga: "26.500"
   satuan: "kg"
   stok: "Ready"
   kategori: "Fresh Product"
   foto: "telur-ayam-lokal.jpg"
 
-- produk: "Telur Ayam Omega"
+telur_omega:
+  produk: "Telur Ayam Omega"
   harga: "27.500"
   satuan: "kg"
   stok: "Ready"
   kategori: "Fresh Product"
   foto: "telur-ayam-omega-lokal.jpg"
 
-- produk: "Mie Instan"
+mie_instan:
+  produk: "Mie Instan"
   harga: "Tersedia"
   satuan: "Karton"
   stok: "Ready"
   kategori: "Mie Instan"
   foto: "indomie-all-varian.jpg"
 
-- produk: "Beras"
+beras_premium:
+  produk: "Beras"
   harga: "Tersedia"
   satuan: "Karung"
   stok: "Ready"

@@ -50,28 +50,28 @@ title: Home
 </div>
 
 <div class="product-grid" id="productContainer">
-  {% for item in site.data.harga %}
-  <div class="product-card" data-category="{{ item.kategori }}">
-    <div class="product-badge">{{ item.stok }}</div>
-    <div class="product-image">
-      <img src="{{ '/assets/images/' | relative_url }}{{ item.foto }}" 
-     alt="{{ item.produk }}" 
-     loading="lazy" decoding="async"
-     onerror="this.src='https://placehold.co/600x400?text=Gambar+Kosong'">
-    </div>
-    <div class="product-info">
-      <span class="category">{{ item.kategori }}</span>
-      <h3>{{ item.produk }}</h3>
-      <div class="price-tag">
-        <span class="currency">Rp</span>
-        <span class="amount">{{ item.harga }}</span>
-        <span class="unit">/{{ item.satuan }}</span>
+  {% for entry in site.data.harga %}
+    {% assign item = entry[1] %}
+    <div class="product-card" data-category="{{ item.kategori }}">
+      <div class="product-badge">{{ item.stok }}</div>
+      <div class="product-image">
+        <img src="{{ '/assets/images/' | relative_url }}{{ item.foto }}" 
+             alt="{{ item.produk }}" 
+             onerror="this.src='https://placehold.co/600x400?text=Gambar+Kosong'">
       </div>
-      <a href="https://wa.me/{{ site.phone }}?text=Halo,%20saya%20ingin%20pesan%20{{ item.produk }}" class="buy-btn">
-         Beli Sekarang
-      </a>
+      <div class="product-info">
+        <span class="category">{{ item.kategori }}</span>
+        <h3>{{ item.produk }}</h3>
+        <div class="price-tag">
+          <span class="currency">Rp</span>
+          <span class="amount">{{ item.harga }}</span>
+          <span class="unit">/{{ item.satuan }}</span>
+        </div>
+        <a href="https://wa.me/{{ site.phone }}?text=Halo%20Alfutuhaat,%20saya%20ingin%20pesan%20{{ item.produk }}" class="buy-btn">
+           Beli Sekarang
+        </a>
+      </div>
     </div>
-  </div>
   {% endfor %}
 </div>
 
@@ -101,40 +101,10 @@ title: Home
 
 <section class="retail-price-section">
   <div class="container">
-    <h2 class="section-title">Daftar Harga Retail</h2>
-    <p style="text-align: center; color: var(--gold-light); margin-top: -30px; margin-bottom: 40px;">Update harian untuk pembelian eceran / satuan</p>
-    
-    <div class="table-container">
-      <table class="retail-table">
-        <thead>
-          <tr>
-            <th>Komoditas</th>
-            <th>Varian</th>
-            <th>Harga Retail</th>
-            <th>Satuan</th>
-          </tr>
-        </thead>
-        <tbody>
-          {% for item in site.data.harga %}
-          <tr>
-            <td class="prod-name">{{ item.produk }}</td>
-            <td>{{ item.kategori }}</td>
-            <td class="gold-text">Rp {{ item.harga }}</td>
-            <td>{{ item.satuan }}</td>
-          </tr>
-          {% endfor %}
-        </tbody>
-      </table>
-    </div>
-  </div>
-</section>
-
-<section class="retail-price-section">
-  <div class="container">
-    <h2 class="section-title">Live Price List</h2>
+    <h2 class="section-title">Live <span class="gold-text">Price List</span></h2>
     <div class="price-update-info">
       <span class="live-pulse"></span>
-      <p>Harga diperbarui secara berkala: <strong id="live-date"></strong></p>
+      <p>Harga diperbarui secara berkala: <strong>{{ "now" | date: "%d %B %Y" }}</strong></p>
     </div>
     
     <div class="table-container">
@@ -149,17 +119,18 @@ title: Home
           </tr>
         </thead>
         <tbody>
-          {% for item in site.data.harga %}
+          {% for entry in site.data.harga %}
+            {% assign item = entry[1] %}
           <tr>
             <td class="prod-name"><strong>{{ item.produk }}</strong></td>
             <td><span class="category-badge">{{ item.kategori }}</span></td>
             <td class="gold-text">Rp {{ item.harga }}</td>
             <td>{{ item.satuan }}</td>
             <td>
-              {% if item.stok == "Tersedia" %}
-                <span class="status-tag stable">✓ Stabil</span>
+              {% if item.stok == "Ready" or item.stok == "Tersedia" %}
+                <span class="status-pill ready">✓ Ready</span>
               {% else %}
-                <span class="status-tag update">↑ Berubah</span>
+                <span class="status-pill limited">⚠ Terbatas</span>
               {% endif %}
             </td>
           </tr>
@@ -239,22 +210,26 @@ function filterProduct(category) {
     const cards = document.querySelectorAll('.product-card');
     const btns = document.querySelectorAll('.filter-btn');
     
-    // Atur status aktif tombol
     btns.forEach(btn => {
         btn.classList.remove('active');
-        if(btn.innerText.toLowerCase() === category.toLowerCase() || (category === 'all' && btn.innerText === 'Semua')) {
+        // Logika mencocokkan teks tombol dengan kategori
+        if(btn.getAttribute('onclick').includes(`'${category}'`)) {
             btn.classList.add('active');
         }
     });
 
-    // Filter kartu
     cards.forEach(card => {
-        if (category === 'all' || card.getAttribute('data-category') === category) {
+        const itemCategory = card.getAttribute('data-category');
+        if (category === 'all' || itemCategory === category) {
             card.style.display = 'block';
-            setTimeout(() => card.style.opacity = '1', 10);
+            // Trigger reflow untuk animasi opacity
+            void card.offsetWidth; 
+            card.style.opacity = '1';
         } else {
             card.style.opacity = '0';
-            setTimeout(() => card.style.display = 'none', 300);
+            setTimeout(() => {
+                if(card.style.opacity === '0') card.style.display = 'none';
+            }, 300);
         }
     });
 }

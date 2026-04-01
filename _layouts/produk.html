@@ -2,6 +2,9 @@
 layout: default
 ---
 
+{% assign p_id = page.id_produk | strip %}
+{% assign live = site.data.harga[p_id] %}
+
 <div class="shop-container">
   <nav class="shop-breadcrumb">
     <a href="/">Beranda</a> / <a href="/katalog">{{ page.kategori | default: "Produk" }}</a> / {{ page.title }}
@@ -10,11 +13,13 @@ layout: default
   <div class="shop-grid">
     <div class="shop-gallery">
       <div class="main-stage">
-        {% if page.stok == "Ready" %}
-          <span class="badge-stock">Tersedia</span>
-        {% endif %}
-        <img src="{{ page.foto | relative_url }}" alt="{{ page.title }}" id="product-zoom">
-      </div>
+  {% if live.stok == "Ready" %}
+    <span class="badge-stock" style="background: #27ae60;">Tersedia</span>
+  {% else %}
+    <span class="badge-stock" style="background: #e67e22;">Stok Terbatas</span>
+  {% endif %}
+  <img src="{{ page.foto | relative_url }}" alt="{{ page.title }}" id="product-zoom">
+</div>
       <div class="thumb-list">
         <img src="{{ page.foto | relative_url }}" class="thumb-active">
         </div>
@@ -30,12 +35,13 @@ layout: default
       </div>
 
       <div class="shop-price-box">
-        <div class="price-now">
-          <span class="currency">Rp</span>
-          <span class="val">{{ page.harga }}</span>
-          <span class="unit">/{{ page.satuan | default: "kg" }}</span>
-        </div>
-      </div>
+  <div class="price-now">
+    <span class="currency">Rp</span>
+    <span class="val">{{ live.harga | default: "Cek WA" }}</span>
+    <span class="unit">/{{ page.satuan | default: "kg" }}</span>
+  </div>
+  <small style="color: #888;">Update terakhir: {{ "now" | date: "%d %B %Y" }}</small>
+</div>
 
       <div class="shop-divider"></div>
 
