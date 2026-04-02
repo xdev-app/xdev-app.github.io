@@ -15,6 +15,6 @@ Dengan pengalaman operasional, kami menerapkan standar penanganan yang ketat: so
 - Dukungan pelanggan responsif melalui WhatsApp dan email.
 
 ### Informasi Perusahaan
-- Alamat: Jl. Sarijadi Raya No.92, Sukarasa, Kec. Sukasari, Kota Bandung, Jawa Barat 40192
+- Alamat: Jl. Sarijadi Raya No.92, Sukarasa, Kec. Sukasari, Kota Bandung, Jawa Barat 40151
 - Email: {{ site.email }}
 - WhatsApp: https://wa.me/{{ site.phone }}
