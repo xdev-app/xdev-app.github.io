@@ -833,7 +833,7 @@ main { margin-top: 80px; }
 }
 @media (max-width: 480px) {
     .product-grid { grid-template-columns: 1fr; gap: 20px; padding: 12px; }
-    .buy-btn { max-width: none; height: 44px; padding: 0; }
+    .buy-btn { max-width: none; height: 30px; padding: 0;font-size: 0.875rem }
 }
 .logo {
     display: inline-flex;
