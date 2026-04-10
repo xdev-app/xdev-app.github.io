@@ -781,6 +781,16 @@ tr:hover {
     h1 { font-size: 1.6rem; }
     h2 { font-size: 1.25rem; }
     h3 { font-size: 1rem; }
+    .shipping-item h3 {
+        font-size: 1rem;
+    }
+    .shipping-item p {
+        font-size: 0.8rem;
+    }
+    .hero h1
+    {
+        font-size: clamp(1.1rem, 5vw, 1.1rem);
+    }
 }
 
 /* MEDIA QUERY (Tampilan Mobile < 858px) */
