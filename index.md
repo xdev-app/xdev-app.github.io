@@ -104,7 +104,7 @@ title: Home
     <h2 class="section-title">Live <span class="gold-text">Price List</span></h2>
     <div class="price-update-info">
       <span class="live-pulse"></span>
-      <p>Harga diperbarui secara berkala: <strong>{{ "now" | date: "%d %B %Y" }}</strong></p>
+      <p>Update Harga: <strong>{{ "now" | date: "%d %B %Y" }}</strong></p>
     </div>
     
     <div class="table-container">
