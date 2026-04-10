@@ -791,6 +791,13 @@ tr:hover {
     {
         font-size: clamp(1.1rem, 5vw, 1.1rem);
     }
+    .section-title
+    {
+        font-size: 1.1rem;
+    }
+    .step p {
+        font-size: .875rem;
+    }
 }
 
 /* MEDIA QUERY (Tampilan Mobile < 858px) */
