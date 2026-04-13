@@ -47,11 +47,14 @@ header nav a:hover {
 }
 
 /* Typography */
+h2.section-title
+{
+    text-align: center;
+}
 h1, h2, h3 {
     font-family: 'Poppins', sans-serif;
     font-weight: 700;
     color: var(--gold-primary);
-    text-align: center;
 }
 h1 { font-size: 2.2rem; line-height: 1.25; }
 h2 { font-size: 1.8rem; line-height: 1.3; }
