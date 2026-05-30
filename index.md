@@ -5,10 +5,10 @@ title: Home
 
 <section class="hero">
   <div class="hero-content">
-    <h1>Stok Melimpah, Kirim Tepat Waktu: 
-      <span>Telur, Indomie & Beras Berkualitas</span>
+    <h1>Agen SEMBAKO BANDUNG 
+      <span>TELUR dan INDOMIE</span>
     </h1>
-    <p>Distributor sembako resmi area Bandung & sekitarnya. Kami menjamin ketersediaan stok harian dan pengiriman langsung ke lokasi Anda.</p>
+    <p>Kami menyediakan produk Telur ayam segar dan Indomie untuk kebutuhan Toko atau Warung, harga kompetitif dan layanan pengiriman langsung ke lokasi</p>
     
     <a href="https://wa.me/{{ site.phone }}?text=Halo%20Alfutuhaat,%20saya%20ingin%20tanya%20stok%20hari%20ini" class="buy-btn hero-cta">
        Hubungi via WhatsApp
