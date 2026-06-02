@@ -188,7 +188,7 @@ title: Home
       <div class="faq-container">
         <details>
           <summary>Berapa minimal order untuk pengiriman?</summary>
-          <p>Minimal order adalah 20 Ikat untuk produk telur dan 5 karung untuk produk beras untuk mendapatkan gratis ongkir area Bandung.</p>
+          <p>Minimal order adalah 20 Ikat untuk produk telur ayam segar dan 200 karton untuk produk indomie guna mendapatkan gratis ongkir area Bandung.</p>
         </details>
         <details>
           <summary>Apakah melayani pengiriman luar kota?</summary>
