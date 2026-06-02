@@ -8,7 +8,7 @@ title: Home
     <h1>Agen SEMBAKO BANDUNG 
       <span>TELUR dan INDOMIE</span>
     </h1>
-    <p>Kami menyediakan produk Telur ayam segar dan Indomie untuk kebutuhan Toko atau Warung, harga kompetitif dan layanan pengiriman langsung ke lokasi</p>
+    <p>Kami menyediakan produk Telur ayam segar dan Indomie untuk kebutuhan Toko atau Warung dengan harga kompetitif dan layanan pengiriman langsung ke lokasi</p>
     
     <a href="https://wa.me/{{ site.phone }}?text=Halo%20Alfutuhaat,%20saya%20ingin%20tanya%20stok%20hari%20ini" class="buy-btn hero-cta">
        Hubungi via WhatsApp
@@ -30,11 +30,10 @@ title: Home
     <h2 class="section-title">Produk Unggulan Kami</h2>
     <div style="max-width: 800px; margin: 0 auto;">
       <p style="color: var(--gold-light); font-weight: bold; margin-bottom: 15px;">
-        Suplai Telur Segar, Beras Premium, dan Mie Instan Terlengkap
+        Telur Ayam Segar dan Indomie
       </p>
       <p style="line-height: 1.6; color: #555;">
-        Sebagai distributor resmi di Bandung, kami fokus menyediakan <strong>Telur Ayam Ras</strong> dari kandang pilihan, 
-        <strong>Beras Kualitas Super</strong>, dan stok <strong>Indomie</strong> melimpah untuk kebutuhan agen, grosir, maupun retail.
+        Kami fokus menyediakan <strong>Telur Ayam Segar</strong> dan <strong>Indomie</strong> dengan banyak varian untuk kebutuhan toko dan warung Anda.
       </p>
     </div>
   </div>
