@@ -1,7 +1,7 @@
 # Simpan di _data/harga.yml
 telur_lokal:
   produk: "Telur Ayam Lokal"
-  harga: "25.500"
+  harga: "24.300"
   satuan: "kg"
   stok: "Ready"
   kategori: "Fresh Product"
@@ -9,7 +9,7 @@ telur_lokal:
 
 telur_omega:
   produk: "Telur Ayam Omega"
-  harga: "27.500"
+  harga: "25.500"
   satuan: "kg"
   stok: "Empty"
   kategori: "Fresh Product"
