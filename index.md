@@ -25,7 +25,7 @@ title: Home
 
 <!-- slideshow removed -->
 {% include slideshow.html %}
-<section class="featured-products" style="text-align: center; padding: 60px 20px 30px; background-color: #000; color: #fff;">
+<section class="featured-products" style="text-align: center; padding: 60px 20px 30px; color: #fff;">
   <div class="container">
     <h2 class="section-title" style="color: var(--gold-primary);">Produk Pilihan Mitra</h2> <div style="max-width: 800px; margin: 0 auto;">
       <p style="font-size: 1.1rem; line-height: 1.6; color: var(--gold-light); margin-bottom: 20px;">
