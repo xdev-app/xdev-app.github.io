@@ -3,16 +3,17 @@ layout: default
 title: Tentang Kami
 ---
 
-## Tentang Distributor Pangan Berkah
+## Tentang GUDANG TELUR & MIE BANDUNG
 
-Kami adalah distributor sembako yang berfokus pada kualitas, keandalan, dan kecepatan layanan. Produk utama meliputi telur ayam lokal, beras kualitas premium, dan mie instan dengan pasokan stabil untuk kebutuhan grosir.
+Kami adalah Mitra Pemasok Sembako yang fokus pada kualitas, keandalan, dan kecepatan pengiriman. Produk utama kami adalah telur ayam lokal segar, beras kualitas premium, dan mie instan dengan pasokan yang selalu terjaga untuk kebutuhan warung, agen, maupun usaha kuliner Anda.
 
-Dengan pengalaman operasional, kami menerapkan standar penanganan yang ketat: sortir telur, pengemasan yang rapi, dan jadwal pengiriman terstruktur. Tujuan kami adalah memastikan pelanggan menerima barang dalam kondisi terbaik dengan harga kompetitif.
+Sebagai bagian dari ekosistem bisnis di Bandung, kami bangga menjadi andalan bagi banyak pelaku usaha lokal. Kami mengerti bahwa ketepatan waktu dan kualitas barang sangat penting bagi keberlangsungan bisnis Anda. Oleh karena itu, kami menerapkan standar penanganan yang ketat: setiap telur kami sortir dengan teliti, pengemasan dilakukan dengan rapi, dan jadwal pengiriman kami atur agar barang sampai di lokasi Anda dalam kondisi terbaik dan harga yang kompetitif.
 
 ### Nilai Utama
-- Transparansi harga dan ketersediaan stok.
-- Pengiriman terjadwal dengan armada internal.
-- Dukungan pelanggan responsif melalui WhatsApp dan email.
+- Terpercaya di Bandung: Kami berkomitmen menjadi rekan yang dapat diandalkan untuk menjaga kelancaran stok bisnis Anda.
+- Transparansi: Harga jelas dan informasi ketersediaan stok dapat Anda cek kapan saja.
+- Pengiriman Terjadwal: Dengan armada internal, kami memastikan barang sampai tepat waktu ke lokasi Anda.
+- Dukungan Responsif: Butuh bantuan atau pesanan mendadak? Hubungi kami kapan saja melalui WhatsApp, kami siap membantu dengan cepat.
 
 ### Informasi Perusahaan
 - Alamat: Jl. Cimuncang No. 26, Padasuka, Kec. Cibeunying Kidul, Kota Bandung 40125
