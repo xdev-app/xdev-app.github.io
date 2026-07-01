@@ -8,7 +8,7 @@ title: Ketentuan Layanan
 Dengan mengakses dan menggunakan situs ini, Anda setuju untuk mematuhi ketentuan berikut.
 
 ### Definisi
-- “Kami” merujuk pada Distributor Pangan Berkah sebagai penyedia layanan.
+- “Kami” merujuk pada GUDANG TELUR & MIE BANDUNG sebagai penyedia layanan.
 - “Pengguna” merujuk pada Anda sebagai pengunjung atau pelanggan.
 
 ### Pemesanan

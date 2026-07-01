@@ -31,7 +31,9 @@ title: Home
       <p style="font-size: 1.1rem; line-height: 1.6; color: var(--gold-light); margin-bottom: 20px;">
         "Kami siap jadi partner stok warung Anda. Telur dan mie yang kami kirim selalu fresh dan terjamin kualitasnya, jadi Anda bisa tenang melayani pelanggan setiap hari tanpa takut barang rusak."
       </p>
-      
+       <p style="font-size: 1.1rem; line-height: 1.6; color: var(--gold-light); margin-bottom: 20px;">
+        "Untuk menjaga harga tetap kompetitif, kami melayani pemesanan grosir dengan ketentuan: minimal belanja 1 ikat telur ayam (isi sekitar 15 kg) dan 5 karton untuk produk Indomie. Kami pastikan proses sortir dilakukan dengan teliti agar Bapak/Ibu hanya menerima produk terbaik."
+      </p>
       <div style="display: flex; justify-content: center; gap: 20px; font-weight: bold; color: var(--gold-light);">
         <span>✓ Kualitas Terjamin</span>
         <span>✓ Stok Selalu Ada</span>

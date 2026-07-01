@@ -5,7 +5,7 @@ title: Tentang Kami
 
 ## Tentang GUDANG TELUR & MIE BANDUNG
 
-Kami adalah Mitra Pemasok Sembako yang fokus pada kualitas, keandalan, dan kecepatan pengiriman. Produk utama kami adalah telur ayam lokal segar, beras kualitas premium, dan mie instan dengan pasokan yang selalu terjaga untuk kebutuhan warung, agen, maupun usaha kuliner Anda.
+Kami adalah Mitra Pemasok Sembako yang fokus pada kualitas, keandalan, dan kecepatan pengiriman. Produk utama kami saat ini adalah telur ayam lokal segar dan mie instan dengan pasokan yang selalu terjaga untuk kebutuhan warung, agen, maupun usaha kuliner Anda.
 
 Sebagai bagian dari ekosistem bisnis di Bandung, kami bangga menjadi andalan bagi banyak pelaku usaha lokal. Kami mengerti bahwa ketepatan waktu dan kualitas barang sangat penting bagi keberlangsungan bisnis Anda. Oleh karena itu, kami menerapkan standar penanganan yang ketat: setiap telur kami sortir dengan teliti, pengemasan dilakukan dengan rapi, dan jadwal pengiriman kami atur agar barang sampai di lokasi Anda dalam kondisi terbaik dan harga yang kompetitif.
 

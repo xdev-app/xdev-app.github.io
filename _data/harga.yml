@@ -23,10 +23,4 @@ mie_instan:
   kategori: "Mie Instan"
   foto: "indomie-all-varian.jpg"
 
-beras_premium:
-  produk: "Beras"
-  harga: "Tersedia"
-  satuan: "Karung"
-  stok: "Empty"
-  kategori: "Rice & Grains"
-  foto: "beras-25kg.jpg"
+
