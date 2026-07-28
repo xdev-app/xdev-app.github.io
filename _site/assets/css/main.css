@@ -9,17 +9,28 @@
     --white-text: #E0E0E0;
 }
 
-html { scroll-behavior: smooth; }
+/* Mencegah overflow horizontal di seluruh halaman */
+*, *::before, *::after {
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+    overflow-x: hidden;
+}
 
 body {
     font-family: 'Poppins', sans-serif;
     background-color: var(--dark-bg);
     color: var(--white-text);
     margin: 0;
+    padding: 0;
     font-size: 17px;
     line-height: 1.7;
     -webkit-font-smoothing: antialiased;
     text-rendering: optimizeLegibility;
+    overflow-x: hidden;
+    width: 100%;
 }
 
 /* Header & Navigasi */
@@ -47,8 +58,7 @@ header nav a:hover {
 }
 
 /* Typography */
-h2.section-title
-{
+h2.section-title {
     text-align: center;
 }
 h1, h2, h3 {
@@ -143,16 +153,15 @@ tr:hover {
     height: 80px;
     width: 100%;
     display: flex;
-    justify-content: space-between; /* Memisahkan Logo dan Menu ke ujung */
+    justify-content: space-between;
     align-items: center;
-    padding: 0 2%; /* Padding diperkecil agar lebih luas */
+    padding: 0 4%;
     border-bottom: 2px solid var(--gold-primary);
     position: fixed;
     top: 0;
-    left: 0; /* Pastikan mulai dari ujung kiri */
-    right: 0; /* Pastikan sampai ujung kanan */
+    left: 0;
+    right: 0;
     z-index: 1000;
-    box-sizing: border-box; /* Penting agar padding tidak menambah lebar */
 }
 
 .nav-links {
@@ -164,7 +173,7 @@ tr:hover {
 }
 
 .nav-links li {
-    margin: 0 5px; /* Memberi jarak antar menu */
+    margin: 0 5px;
 }
 
 .nav-links li a {
@@ -200,7 +209,7 @@ tr:hover {
 /* Hamburger Icon */
 .checkbtn {
     cursor: pointer;
-    display: none; /* Sembunyikan di Desktop */
+    display: none;
     flex-direction: column;
     gap: 5px;
     padding: 8px;
@@ -215,44 +224,30 @@ tr:hover {
     transition: 0.3s;
 }
 
-
 /* Hero Section */
-/* Hero Section - Full Width Edition */
-/* Hero Section - Premium Elegant Edition */
-/* Hero Section - Optimized for Full Screen */
 .hero {
-    width: 100vw;
+    width: 100%;
     position: relative;
-    left: 50%;
-    right: 50%;
-    margin-left: -50vw;
-    margin-right: -50vw;
     margin-top: 0 !important;
-
-    /* Tinggi pas layar: Tinggi Viewport - Tinggi Navbar */
     height: calc(100vh - 80px);
     min-height: 500px;
-
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
     text-align: center;
     padding: 20px;
-
     background: linear-gradient(rgba(0, 0, 0, 0.75), rgba(0, 0, 0, 0.85)),
     url('/assets/images/hero-bg.jpg');
     background-size: cover;
     background-position: center;
     background-attachment: fixed;
     border-bottom: 3px solid var(--gold-primary);
-    box-sizing: border-box;
 }
 
 .hero h1 {
     font-family: 'Poppins', sans-serif;
-    /* Perbaikan clamp: min 1.8rem, preferensi 5vw, max 3.5rem */
-    font-size: clamp(1.5rem, 5vw, 1.5rem);
+    font-size: clamp(1.5rem, 5vw, 2.5rem);
     color: #FFFFFF;
     line-height: 1.2;
     margin-bottom: 20px;
@@ -260,7 +255,6 @@ tr:hover {
     font-weight: 700;
 }
 
-/* Animasi Panah Scroll Down */
 .scroll-indicator {
     position: absolute;
     bottom: 30px;
@@ -279,32 +273,19 @@ tr:hover {
     60% {transform: translateX(-50%) translateY(-5px);}
 }
 
-/* Responsif Mobile */
-@media (max-width: 768px) {
-    .hero {
-        height: calc(100dvh - 80px); /* d極h untuk mobile browser modern */
-        background-attachment: scroll;
-    }
-    .scroll-indicator { display: none; } /* Sembunyikan panah di HP agar tidak menutupi tombol */
-}
-
-/* Styling Konten di dalam Hero */
 .hero-content {
     max-width: 900px;
     animation: fadeInUp 1s ease-out;
 }
 
-
-
-/* Menonjolkan kata penting dengan warna emas */
 .hero h1 span {
     color: var(--gold-primary);
-    display: block; /* Membuat kalimat kedua turun ke bawah */
+    display: block;
     margin-top: 10px;
 }
 
 .hero p {
-    font-size: clamp(0.8rem, 2vw, 1.2rem);
+    font-size: clamp(0.88rem, 2vw, 1.2rem);
     color: var(--gold-light);
     max-width: 700px;
     margin: 0 auto 35px;
@@ -312,7 +293,6 @@ tr:hover {
     opacity: 0.9;
 }
 
-/* Tombol CTA Utama */
 .hero .buy-btn {
     background: linear-gradient(135deg, var(--gold-primary) 0%, #B8860B 100%);
     color: #000 !important;
@@ -321,7 +301,7 @@ tr:hover {
     font-weight: 800;
     text-transform: uppercase;
     letter-spacing: 1.5px;
-    border-radius: 50px; /* Membuat tombol lebih modern/rounded */
+    border-radius: 50px;
     transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
     box-shadow: 0 10px 20px rgba(212, 175, 55, 0.3);
     border: 2px solid transparent;
@@ -337,12 +317,12 @@ tr:hover {
 
 .hero-cta {
     margin-top: 30px;
-    padding: 15px 40px !important; /* Lebih besar dari tombol produk */
+    padding: 15px 40px !important;
     font-size: 0.8rem !important;
-    height: auto !important; /* Agar padding berfungsi maksimal */
-    border-radius: 50px !important; /* Membuat bentuk pill yang modern */
+    height: auto !important;
+    border-radius: 50px !important;
 }
-/* Animasi Muncul */
+
 @keyframes fadeInUp {
     from {
         opacity: 0;
@@ -351,14 +331,6 @@ tr:hover {
     to {
         opacity: 1;
         transform: translateY(0);
-    }
-}
-
-/* Responsif untuk Mobile */
-@media (max-width: 768px) {
-    .hero {
-        min-height: 60vh;
-        background-attachment: scroll; /* Matikan fixed bg di HP agar performa lancar */
     }
 }
 
@@ -372,14 +344,13 @@ tr:hover {
     margin: 0 auto;
 }
 
-/* Product Card */
 .product-card {
     background: var(--dark-surface);
     border: 1px solid #333;
     border-radius: 15px;
     overflow: hidden;
     position: relative;
-    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    transition: transform 0.3s ease, box-shadow 0.3s ease, opacity 0.3s ease-in-out;
 }
 
 .product-card:hover {
@@ -422,7 +393,7 @@ tr:hover {
     padding: 20px;
     display: flex;
     flex-direction: column;
-    min-height: 200px; /* Memberikan ruang yang cukup agar seragam */
+    min-height: 200px;
 }
 
 .category {
@@ -440,20 +411,17 @@ tr:hover {
     font-family: 'Poppins', sans-serif;
 }
 
-/* --- Perbaikan Live Price Section --- */
-
 .price-update-info {
     display: flex;
     align-items: center;
     justify-content: center;
     gap: 12px;
-    margin-top: -25px; /* Menarik ke atas agar dekat dengan judul */
+    margin-top: -25px;
     margin-bottom: 40px;
     font-size: 0.9rem;
     color: var(--gold-light);
 }
 
-/* Animasi Titik Live */
 .live-pulse {
     width: 12px;
     height: 12px;
@@ -472,10 +440,9 @@ tr:hover {
     animation: live-ring 1.5s infinite ease-in-out;
 }
 
-/* Memaksa elemen di atas tombol untuk mengambil ruang sisa */
 .price-tag {
     margin: 10px 0 20px 0;
-    flex-grow: 1; /* Ini kunci agar tombol terdorong ke paling bawah */
+    flex-grow: 1;
 }
 
 .price-tag .amount {
@@ -483,12 +450,11 @@ tr:hover {
     font-weight: bold;
 }
 
-/* Tombol Beli Sekarang dengan tampilan rapi & premium */
 .buy-btn {
     display: inline-flex;
     align-items: center;
     justify-content: center;
-    width: auto;
+    width: 100%;
     max-width: 280px;
     height: 42px;
     padding: 0 18px;
@@ -538,12 +504,6 @@ tr:hover {
     box-shadow: 0 0 15px rgba(212, 175, 55, 0.4);
 }
 
-/* Animasi transisi kartu */
-.product-card {
-    transition: transform 0.3s, opacity 0.3s ease-in-out;
-}
-
-/* Update Stok Styling */
 .update-header {
     text-align: center;
     padding: 40px 0;
@@ -583,9 +543,8 @@ tr:hover {
     text-align: center;
 }
 
-.prod-name { font-weight: 600; color: #fff; }
+.prod-name { font-weight: 600; color: #fff !important; }
 
-/* Status Pills */
 .status-pill {
     padding: 6px 12px;
     border-radius: 4px;
@@ -596,7 +555,6 @@ tr:hover {
 .status-pill.limited { background: #432818; color: #ffb703; }
 .status-pill.empty { background: #431212; color: #ff8b8b; }
 
-/* Share Button */
 .share-section {
     text-align: center;
     margin-top: 30px;
@@ -615,11 +573,9 @@ tr:hover {
 .ad-banner { margin: 20px auto; max-width: 1100px; padding: 0 20px; }
 .ad-placeholder { background: #181818; color: #777; border: 1px dashed #444; border-radius: 12px; min-height: 120px; display: flex; align-items: center; justify-content: center; }
 
-
-/* Styling Logistik & Pengiriman */
 .shipping-info {
     padding: 80px 20px;
-    background: #161616; /* Sedikit lebih terang dari background utama untuk kontras */
+    background: #161616;
     margin-top: 50px;
     border-top: 1px solid #333;
 }
@@ -685,7 +641,7 @@ tr:hover {
     border: 2px solid var(--gold-primary);
     border-radius: 12px;
     overflow: hidden;
-    filter: grayscale(0.8) contrast(1.2); /* Membuat peta terlihat lebih menyatu dengan dark mode */
+    filter: grayscale(0.8) contrast(1.2);
 }
 
 .faq-container details {
@@ -715,7 +671,6 @@ tr:hover {
     border-color: var(--gold-primary);
 }
 
-/* Styling Tabel Retail Premium */
 .retail-price-section {
     padding: 60px 20px;
 }
@@ -751,111 +706,130 @@ tr:hover {
 }
 
 .retail-table tr:hover {
-    background: rgba(212, 175, 55, 0.05); /* Efek highlight emas tipis saat kursor lewat */
+    background: rgba(212, 175, 55, 0.05);
 }
 
-.prod-name {
-    font-weight: 600;
-    color: #fff !important;
-}
-
-/* Responsif Mobile */
-@media (max-width: 600px) {
-    .retail-table th, .retail-table td {
-        padding: 12px 10px;
-        font-size: 0.75rem;
-    }
-}
-
-/* Responsif untuk HP */
-@media (max-width: 768px) {
-    .container-split {
-        grid-template-columns: 1fr;
-    }
-    .price-tag .amount
-    {
-        font-size: 1.2rem;
-    }
-    .product-info h3 {
-        font-size: 0.87rem;
-    }
-}
-@media (max-width: 768px) {
-    body { font-size: 0.875rem; line-height: 1.7; }
-    h1 { font-size: 1.6rem; }
-    h2 { font-size: 1.25rem; }
-    h3 { font-size: 1rem; }
-    .shipping-item h3 {
-        font-size: 1rem;
-    }
-    .shipping-item p {
-        font-size: 0.8rem;
-    }
-    .hero h1
-    {
-        font-size: clamp(1.1rem, 5vw, 1.1rem);
-    }
-    .section-title
-    {
-        font-size: 1.1rem;
-    }
-    .step p {
-        font-size: .875rem;
-    }
-}
-
-/* MEDIA QUERY (Tampilan Mobile < 858px) */
+/* KUMPULAN MEDIA QUERIES MOBILE YANG SUDAH DIPERBAIKI */
 @media (max-width: 858px) {
-    .checkbtn { display: flex; }
+    .navbar {
+        padding: 0 16px;
+    }
+
+    .checkbtn {
+        display: flex;
+        z-index: 1001;
+    }
 
     .nav-links {
         position: fixed;
-        width: 100%;
-        height: 100vh;
-        background: #121212;
         top: 80px;
-        left: -100%; /* Sembunyi di kiri */
-        text-align: center;
-        transition: all .5s;
+        left: -100%;
+        width: 100%;
+        height: calc(100vh - 80px);
+        background: #121212;
         flex-direction: column;
-        padding-top: 50px;
+        justify-content: flex-start;
+        align-items: center;
+        padding-top: 40px;
+        transition: left 0.4s ease-in-out;
+        box-sizing: border-box;
+        overflow-y: auto;
     }
 
     .nav-links li {
-        margin: 20px 0;
+        margin: 12px 0;
+        width: 100%;
+        text-align: center;
     }
 
     .nav-links li a {
-        font-size: 20px;
+        font-size: 18px;
         min-height: 48px;
-        display: block;
+        display: inline-flex;
+        justify-content: center;
+        width: 100%;
+        padding: 10px 0;
     }
 
-    /* Saat checkbox di-klik, menu muncul */
+    .nav-btn-wa {
+        margin-left: 0 !important;
+        margin-top: 10px;
+        width: 80% !important;
+        max-width: 250px;
+    }
+
     #check:checked ~ .nav-links {
-        left: 0;
+    left: 0;
     }
 
-    /* Animasi Hamburger jadi Silang (Opsional) */
     #check:checked ~ .checkbtn span:nth-child(1) { transform: rotate(45deg) translate(5px, 6px); }
     #check:checked ~ .checkbtn span:nth-child(2) { opacity: 0; }
     #check:checked ~ .checkbtn span:nth-child(3) { transform: rotate(-45deg) translate(5px, -6px); }
 }
 
-/* Tambahkan padding di main agar tidak tertutup navbar fixed */
-main { margin-top: 80px; }
+@media (max-width: 768px) {
+    body { font-size: 0.875rem; line-height: 1.7; }
+    h1 { font-size: 1.6rem; }
+    h2 { font-size: 1.25rem; }
+    h3 { font-size: 1rem; }
 
-.hero { padding: 60px 20px; }
+    .hero {
+        height: calc(100dvh - 80px);
+        min-height: 60vh;
+        background-attachment: scroll;
+        padding: 40px 16px;
+    }
+
+    .hero h1 {
+        font-size: clamp(1.1rem, 5vw, 1.8rem);
+    }
+
+    .scroll-indicator { display: none; }
+
+    .container-split {
+        grid-template-columns: 1fr;
+        gap: 30px;
+    }
+
+    .price-tag .amount { font-size: 1.2rem; }
+    .product-info h3 { font-size: 0.87rem; }
+    .shipping-item h3 { font-size: 1rem; }
+    .shipping-item p { font-size: 0.8rem; }
+    .section-title { font-size: 1.1rem; }
+    .step p { font-size: .875rem; }
+}
+
 @media (max-width: 600px) {
-    main { margin-top: 90px; }
-    .hero { padding: 40px 16px; }
+    main { margin-top: 80px; }
     .product-image { height: 180px; }
     .footer-contact .footer-wa { min-height: 44px; display: inline-flex; align-items: center; }
+
+    .retail-table th, .retail-table td {
+        padding: 12px 10px;
+        font-size: 0.75rem;
+    }
+
+    .step { padding: 24px 18px; }
+    .step-num { width: 44px; height: 44px; font-size: .95rem; }
 }
+
 @media (max-width: 480px) {
-    .product-grid { grid-template-columns: 1fr; gap: 20px; padding: 12px; }
-    .buy-btn { max-width: none; height: 30px; padding: 0;font-size: 0.875rem }
+    .product-grid {
+        grid-template-columns: 1fr;
+        gap: 20px;
+        padding: 12px;
+    }
+
+    .buy-btn {
+        max-width: 100%;
+        height: 40px;
+        font-size: 0.85rem;
+    }
 }
+
+/* Sisa Komponen UI */
+main { margin-top: 80px; }
+
 .logo {
     display: inline-flex;
     align-items: center;
@@ -869,6 +843,7 @@ main { margin-top: 80px; }
     transform: translateY(-2px);
     filter: brightness(1.12) drop-shadow(0 0 10px rgba(212,175,55,.3));
 }
+
 .order-steps {
     padding: 60px 20px;
     background: linear-gradient(180deg, #121212 0%, #0d0d0d 100%);
@@ -925,16 +900,7 @@ main { margin-top: 80px; }
     color: #a0a0a0;
     font-size: .95rem;
 }
-@media (max-width: 640px) {
-    .step {
-        padding: 24px 18px;
-    }
-    .step-num {
-        width: 44px;
-        height: 44px;
-        font-size: .95rem;
-    }
-}
+
 .site-footer {
     background: #0f0f0f;
     border-top: 2px solid var(--gold-primary);
@@ -982,6 +948,7 @@ main { margin-top: 80px; }
     border-top: 1px solid #222;
     padding-top: 15px;
 }
+
 .blog-list { padding: 60px 20px; max-width: 1100px; margin: 0 auto; }
 .posts { display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 24px; }
 .post-card { background: var(--dark-surface); border: 1px solid #333; border-radius: 12px; padding: 20px; transition: transform .2s ease, border-color .2s ease; }
@@ -991,11 +958,9 @@ main { margin-top: 80px; }
 .post-meta { color: #999; font-size: .85rem; margin-bottom: 10px; }
 .post-excerpt { color: #cfcfcf; font-size: .95rem; }
 .read-more { display: inline-block; margin-top: 10px; color: #000; background: var(--gold-primary); padding: 8px 14px; border-radius: 6px; text-decoration: none; font-weight: 700; }
+
 .post { padding: 60px 20px; }
 .post-container { max-width: 900px; margin: 0 auto; }
 .post-content { color: #d0d0d0; line-height: 1.85; }
-.post-content img { max-width: 700px; width: 100%; height: auto; display: block; margin: 0 auto 16px; border-radius: 12px; }
-@media (max-width: 600px) {
-  .post-content img { max-width: 100%; border-radius: 10px; }
-}
+.post-content img { max-width: 100%; height: auto; display: block; margin: 0 auto 16px; border-radius: 12px; }
 .post-actions { max-width: 900px; margin: 20px auto; }
