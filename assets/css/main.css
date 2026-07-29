@@ -644,6 +644,14 @@ tr:hover {
     filter: grayscale(0.8) contrast(1.2);
 }
 
+/* Tambahkan aturan ini untuk meresponsifkan peta di mobile */
+.map-wrapper iframe {
+    width: 100%;
+    max-width: 100%;
+    height: 350px;
+    display: block;
+}
+
 .faq-container details {
     background: var(--dark-surface);
     border: 1px solid #333;
