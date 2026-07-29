@@ -776,20 +776,33 @@ tr:hover {
 }
 
 @media (max-width: 768px) {
-    body { font-size: 0.875rem; line-height: 1.7; }
-    h1 { font-size: 1.6rem; }
-    h2 { font-size: 1.25rem; }
-    h3 { font-size: 1rem; }
+    /* Mengatur ukuran huruf umum di HP */
+    body {
+        font-size: 0.875rem; /* ~14px agar tidak kebesaran */
+        line-height: 1.6;
+    }
 
+    /* Ukuran Judul di HP */
+    h1 { font-size: 1.4rem; }
+    h2 { font-size: 1.2rem; }
+    h3 { font-size: 1.0rem; }
+
+    /* Teks deskripsi / paragraf di hero section */
+    .hero p {
+        font-size: 0.9rem;
+    }
+
+    /* Teks di dalam tabel harga retail */
+    .retail-table th, .retail-table td {
+        font-size: 0.75rem;
+    }
+
+    /* Sisa kode media query yang sudah ada tetap dibiarkan di bawahnya */
     .hero {
         height: calc(100dvh - 80px);
         min-height: 60vh;
         background-attachment: scroll;
         padding: 40px 16px;
-    }
-
-    .hero h1 {
-        font-size: clamp(1.1rem, 5vw, 1.8rem);
     }
 
     .scroll-indicator { display: none; }
