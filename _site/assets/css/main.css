@@ -778,7 +778,7 @@ tr:hover {
 @media (max-width: 768px) {
     /* Mengatur ukuran huruf umum di HP */
     body {
-        font-size: 0.875rem; /* ~14px agar tidak kebesaran */
+        font-size: 0.75rem; /* ~14px agar tidak kebesaran */
         line-height: 1.6;
     }
 
