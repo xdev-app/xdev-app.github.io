@@ -792,6 +792,7 @@ tr:hover {
     /* Teks deskripsi / paragraf di hero section */
     .hero p {
         font-size: 0.75rem;
+        letter-spacing: 0.07em;
     }
 
     /* Teks di dalam tabel harga retail */
