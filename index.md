@@ -6,9 +6,9 @@ title: Home
 <section class="hero">
   <div class="hero-content">
     <h1>GUDANG TELUR & MIE BANDUNG 
-      <span>Solusi Belanja Sembako Hemat & Cepat</span>
+      <span>Solusi Belanja Telur & Indomie</span>
     </h1>
-    <p>Butuh stok telur dan Indomie untuk warung Anda? Gudang Telur & Mie Bandung sediakan barang berkualitas dengan harga terbaik. Pengiriman cepat, stok selalu aman!</p>
+    <p>Butuh stok telur dan Indomie untuk kebutuhan warung Anda? Gudang Telur & Mie Bandung menyediakan barang berkualitas dengan harga terbaik. Pengiriman cepat, stok selalu aman!</p>
     
     <a href="https://wa.me/{{ site.phone }}?text=Halo%20Alfutuhaat,%20saya%20ingin%20tanya%20stok%20hari%20ini" class="buy-btn hero-cta">
        Hubungi via WhatsApp
