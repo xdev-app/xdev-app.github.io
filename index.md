@@ -28,10 +28,10 @@ title: Home
 <section class="featured-products" style="text-align: center; padding: 60px 20px 30px; color: #fff;">
   <div class="container">
     <h2 class="section-title" style="color: var(--gold-primary);">Produk Pilihan Mitra</h2> <div style="max-width: 800px; margin: 0 auto;">
-      <p style="font-size: 1.1rem; line-height: 1.6; color: var(--gold-light); margin-bottom: 20px;">
-        "Kami siap jadi partner stok warung Anda. Telur dan mie yang kami kirim selalu fresh dan terjamin kualitasnya, jadi Anda bisa tenang melayani pelanggan setiap hari tanpa takut barang rusak."
+      <p style="font-size: 0.75rem; line-height: 1.6; color: var(--gold-light); margin-bottom: 20px;">
+        "Kami siap jadi partner stok warung Anda. Telur yang kami kirim selalu fresh dan Indomie dengan masa expired yang lama serta terjamin kualitasnya, jadi Anda bisa tenang melayani pelanggan setiap hari tanpa takut barang rusak."
       </p>
-       <p style="font-size: 1.1rem; line-height: 1.6; color: var(--gold-light); margin-bottom: 20px;">
+       <p style="font-size: 0.75rem; line-height: 1.6; color: var(--gold-light); margin-bottom: 20px;">
         "Untuk menjaga harga tetap kompetitif, kami melayani pemesanan grosir dengan ketentuan: minimal belanja 1 ikat telur ayam (isi sekitar 15 kg) dan 5 karton untuk produk Indomie. Kami pastikan proses sortir dilakukan dengan teliti agar Bapak/Ibu hanya menerima produk terbaik."
       </p>
       <div style="display: flex; justify-content: center; gap: 20px; font-weight: bold; color: var(--gold-light);">
