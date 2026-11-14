@@ -784,6 +784,7 @@ tr:hover {
 
     /* Ukuran Judul di HP */
     .hero h1 { font-size: 1rem; }
+    .hero h1 span { font-size: 0.85rem; }
     h1 { font-size: 1rem; }
     h2 { font-size: 0.85rem; }
     h3 { font-size: 0.75rem; }
