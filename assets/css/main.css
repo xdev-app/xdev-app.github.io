@@ -783,13 +783,14 @@ tr:hover {
     }
 
     /* Ukuran Judul di HP */
-    h1 { font-size: 1.4rem; }
-    h2 { font-size: 1.2rem; }
-    h3 { font-size: 1.0rem; }
+    .hero h1 { font-size: 1rem; }
+    h1 { font-size: 1rem; }
+    h2 { font-size: 0.85rem; }
+    h3 { font-size: 0.75rem; }
 
     /* Teks deskripsi / paragraf di hero section */
     .hero p {
-        font-size: 0.9rem;
+        font-size: 0.75rem;
     }
 
     /* Teks di dalam tabel harga retail */
