@@ -63,13 +63,14 @@ title: Home
       <div class="product-info">
         <span class="category">{{ item.kategori }}</span>
         <h3>{{ item.produk }}</h3>
+        Update Harga: <strong style="color: var(--gold-light); ">{{ "now" | date: "%d %B %Y" }}</strong>
         <div class="price-tag">
           <span class="currency">Rp</span>
           <span class="amount">{{ item.harga }}</span>
           <span class="unit">/{{ item.satuan }}</span>
         </div>
         <a href="https://wa.me/{{ site.phone }}?text=Halo%20Alfutuhaat,%20saya%20ingin%20pesan%20{{ item.produk }}" class="buy-btn">
-           Beli Sekarang
+           Pesan Sekarang
         </a>
       </div>
     </div>

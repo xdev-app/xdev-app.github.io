@@ -9,7 +9,7 @@ telur_lokal:
 
 telur_omega:
   produk: "Telur Ayam Omega"
-  harga: "23.500"
+  harga: "28.000"
   satuan: "kg"
   stok: "Empty"
   kategori: "Fresh Product"
