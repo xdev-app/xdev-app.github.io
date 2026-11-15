@@ -70,7 +70,7 @@ title: Home
           <span class="unit">/{{ item.satuan }}</span>
         </div>
         <a href="https://wa.me/{{ site.phone }}?text=Halo%20Alfutuhaat,%20saya%20ingin%20pesan%20{{ item.produk }}" class="buy-btn">
-           Pesan Sekarang
+           Chat untuk Order
         </a>
       </div>
     </div>

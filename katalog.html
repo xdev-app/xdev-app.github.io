@@ -25,7 +25,7 @@ title: Katalog Produk Distributor
       <div class="product-info">
         <span class="category">{{ item.kategori }}</span>
         <h3>{{ item.title }}</h3>
-
+        Update Harga: <strong style="color: var(--gold-light); ">{{ "now" | date: "%d %B %Y" }}</strong>
         <div class="price-tag">
           <span class="currency">Rp</span>
           <span class="amount">{{ live_data.harga | default: "Hubungi Admin" }}</span>
@@ -33,7 +33,7 @@ title: Katalog Produk Distributor
         </div>
 
         <div class="action-buttons" style="display: flex; gap: 10px; margin-top: 15px;">
-          <a href="{{ item.url | relative_url }}" class="buy-btn" style="flex: 1; background: #333;">Detail</a>
+          <a href="{{ item.url | relative_url }}" class="buy-btn" style="flex: 1; background: #e2d5d5;">Detail</a>
           <a href="https://wa.me/{{ site.phone }}?text=Halo%20Alfutuhaat,%20cek%20stok%20{{ item.title }}"
              class="buy-btn" style="flex: 1; background: var(--gold-primary); color: #000;">
              WA

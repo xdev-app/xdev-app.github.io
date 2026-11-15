@@ -23,11 +23,11 @@ Kami adalah agen sembako **{{ page.title }}** dengan kualitas terbaik di Bandung
 ---
 
 ### Spesifikasi Produk:
-* **Kemasan:** Ikat (isi kurang lebih **15 kg**) atau Peti.
+* **Kemasan:** Ikatan (tray telur dengan isi kurang lebih **15 kg**) atau Petian.
 * **Kondisi:** Sortir ketat (bebas pecah dan retak).
 * **Minimal Order:** 20 ikat untuk pengiriman gratis wilayah Bandung.
 
-### Keunggulan Alfutuhaat:
+### Keunggulan:
 Sangat cocok untuk kebutuhan warung sembako, toko kue, atau konsumsi rumah tangga dalam partai besar. Kami menjamin **tidak ada telur busuk** dalam setiap kiriman karena telah melalui proses sortir manual.
 
 <div class="cta-box">
