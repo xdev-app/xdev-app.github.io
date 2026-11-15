@@ -32,7 +32,7 @@ title: Home
         "Kami siap jadi partner stok warung Anda. Telur yang kami kirim selalu fresh dan Indomie dengan masa expired yang lama serta terjamin kualitasnya, jadi Anda bisa tenang melayani pelanggan setiap hari tanpa takut barang rusak."
       </p>
        <p style="font-size: 0.75rem; line-height: 1.6; letter-spacing: 0.07em; color: var(--gold-light); margin-bottom: 20px;">
-        "kami melayani pemesanan dengan ketentuan: minimal belanja telur 1 ikat untuk telur ayam (isi sekitar 15 kg) dan minimal belanja Indomie sebanyak 5 karton  Kami pastikan proses sortir telur dilakukan dengan teliti agar Bapak/Ibu hanya menerima produk terbaik."
+        "kami melayani pemesanan Telur dan Indomie dengan ketentuan: Untuk telur minimal belanja 1 ikat (isi sekitar 15 kg) dan Indomie minimal sebanyak 5 karton  Kami pastikan proses sortir telur dilakukan dengan teliti agar Bapak/Ibu hanya menerima produk terbaik."
       </p>
       <div style="display: flex; justify-content: center; gap: 15px; font-weight: bold; color: var(--gold-light);">
         <span>✓ Quality</span>
@@ -46,8 +46,7 @@ title: Home
 
 <div class="filter-container">
   <button class="filter-btn active" onclick="filterProduct('all')">Semua</button>
-  <button class="filter-btn" onclick="filterProduct('Fresh Product')">Telur</button>
-  <button class="filter-btn" onclick="filterProduct('Rice & Grains')">Beras</button>
+  <button class="filter-btn" onclick="filterProduct('Fresh Product')">Telur</button>  
   <button class="filter-btn" onclick="filterProduct('Mie Instan')">Mie Instan</button>
 </div>
 
